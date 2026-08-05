@@ -9,7 +9,7 @@ WORKDIR /app
 COPY package.json kumo.config.json* ./
 
 # Install dependencies (includes devDependencies needed for vite build)
-RUN kumo install
+RUN kumo fetch && kumo ci
 
 # Copy source
 COPY . .
