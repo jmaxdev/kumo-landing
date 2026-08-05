@@ -1,102 +1,139 @@
 lockfile_version: '1.0'
-config_hash: '33b33ce6bffa0d32467a1bfda7c224daff672db010d35dcd5693d370d4444d54'
+config_hash: e4f2753486dc68302adf99ac5cf2136e56a28a2141bc26ffca072a2fb920842e
 dependencies:
-  '@tailwindcss/vite': '4.3.3'
-  react: '19.2.8'
+  '@types/node': '24.13.3'
   tailwindcss: '4.3.3'
-  react-dom: '19.2.8'
+  '@tailwindcss/vite': '4.3.3'
   oxlint: '1.77.0'
+  react-dom: '19.2.8'
   '@vitejs/plugin-react': '6.0.5'
-  vite: '8.2.0'
+  typescript: '5.9.3'
   '@types/react': '19.2.18'
-  '@types/node': '26.1.2'
+  react: '19.2.8'
+  vite: '8.2.0'
   '@types/react-dom': '19.2.4'
-  typescript: '7.0.2'
 packages:
-  lightningcss@1.33.0:
+  source-map-js@1.2.1:
     resolution:
-      tarball: https://registry.npmjs.org/lightningcss/-/lightningcss-1.33.0.tgz
-      shasum: c08867d71a79385c6e190214fd72fef3e5f95f0b
+      tarball: https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz
+      shasum: '1ce5650fddd87abc099eda37dcff024c2667ae46'
       size: 0
-      unpackedSize: 513814
+      unpackedSize: 139872
       signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEYCIQD6IxrcvTJjhhJlgfKe7RuFv5TmKSx2/oRjJFZ6rhFXsAIhAPzxReFHw+l4nMIgYtlaZJJJUFVgHCmzSnw1tHjX2ikY
-      npm-signature: null
-      attestations: null
-    dependencies:
-      detect-libc: ^2.0.3
-    bin: null
-    scripts:
-      prepublishOnly: node scripts/build-flow.js
-      build-release: node scripts/build.js --release && node scripts/build-flow.js
-      prepare: patch-package
-      build: node scripts/build.js && node scripts/build-flow.js
-      test: uvu node/test
-      wasm:build-release: cargo build --target wasm32-unknown-unknown -p lightningcss_node --release && wasm-opt target/wasm32-unknown-unknown/release/lightningcss_node.wasm --asyncify --pass-arg=asyncify-imports@env.await_promise_sync -Oz -o wasm/lightningcss_node.wasm && node scripts/build-wasm.js
-      website:build: yarn wasm:build-release && parcel build 'website/*.html' website/playground/index.html
-      website:start: parcel 'website/*.html' website/playground/index.html
-      build-ast: cargo run --example schema --features jsonschema && node scripts/build-ast.js
-      wasm:build: cargo build --target wasm32-unknown-unknown -p lightningcss_node && wasm-opt target/wasm32-unknown-unknown/debug/lightningcss_node.wasm --asyncify --pass-arg=asyncify-imports@env.await_promise_sync -Oz -o wasm/lightningcss_node.wasm && node scripts/build-wasm.js
-      tsc: tsc -p node/tsconfig.json
-    optional_dependencies:
-      lightningcss-linux-arm64-musl: '1.33.0'
-      lightningcss-darwin-arm64: '1.33.0'
-      lightningcss-android-arm64: '1.33.0'
-      lightningcss-freebsd-x64: '1.33.0'
-      lightningcss-linux-x64-gnu: '1.33.0'
-      lightningcss-win32-x64-msvc: '1.33.0'
-      lightningcss-linux-x64-musl: '1.33.0'
-      lightningcss-win32-arm64-msvc: '1.33.0'
-      lightningcss-darwin-x64: '1.33.0'
-      lightningcss-linux-arm-gnueabihf: '1.33.0'
-      lightningcss-linux-arm64-gnu: '1.33.0'
-    published_at: '2026-07-20T05:11:09.509Z'
-  '@tailwindcss/oxide@4.3.3':
-    resolution:
-      tarball: https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.3.3.tgz
-      shasum: '6266109d025cfcb04f8e4c58954a6f630a415b7f'
-      size: 0
-      unpackedSize: 29502
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIQDfoh40SFdKwOmL382MtobZdI3jtEeEBMg26aC7gWoWsAIgHnQzejwfwuIOunIuw3warKAhvqp9K5NSe6GUfz9QxLs=
-      npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/@tailwindcss%2foxide@4.3.3
-    dependencies: null
-    bin: null
-    scripts: null
-    optional_dependencies:
-      '@tailwindcss/oxide-linux-x64-musl': '4.3.3'
-      '@tailwindcss/oxide-darwin-arm64': '4.3.3'
-      '@tailwindcss/oxide-freebsd-x64': '4.3.3'
-      '@tailwindcss/oxide-wasm32-wasi': '4.3.3'
-      '@tailwindcss/oxide-linux-arm-gnueabihf': '4.3.3'
-      '@tailwindcss/oxide-android-arm64': '4.3.3'
-      '@tailwindcss/oxide-darwin-x64': '4.3.3'
-      '@tailwindcss/oxide-win32-arm64-msvc': '4.3.3'
-      '@tailwindcss/oxide-linux-arm64-musl': '4.3.3'
-      '@tailwindcss/oxide-win32-x64-msvc': '4.3.3'
-      '@tailwindcss/oxide-linux-x64-gnu': '4.3.3'
-      '@tailwindcss/oxide-linux-arm64-gnu': '4.3.3'
-    published_at: '2026-07-16T12:03:29.017Z'
-  picomatch@4.0.5:
-    resolution:
-      tarball: https://registry.npmjs.org/picomatch/-/picomatch-4.0.5.tgz
-      shasum: '51ea57a17d86f605f81039595fbc40ed06a55fab'
-      size: 0
-      unpackedSize: 92989
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEQCIFU4/XOraofxxhboVULtfabLCGBg+AHnYxrXA24ujf97AiBEa1mO9kH4+wkQz4R1MmC1ZdBYk7xA2FMUoHXJPRWqKA==
+      - keyid: SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA
+        sig: MEQCIF7zHaog7N5XY2DykQjfGxUeAeVvRFqUB8sMKuD4ChEpAiB50o3vma1R3cIXK4qnyc0QLZHy4+HJnMWjhJr9mK4jnQ==
       npm-signature: null
       attestations: null
     dependencies: null
     bin: null
     scripts: null
     optional_dependencies: null
-    published_at: '2026-07-02T16:47:23.026Z'
+    published_at: '2024-09-08T16:22:55.645Z'
+  rolldown@1.2.2:
+    resolution:
+      tarball: https://registry.npmjs.org/rolldown/-/rolldown-1.2.2.tgz
+      shasum: f28076716936bceda05e0d0559502a5ceb0a6e9e
+      size: 0
+      unpackedSize: 835094
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEUCIQCh/lYz9vCnqqXCsDFC2UEl6Fc2bVy7sk9Q2fGoZDSI/wIgDv6Rca7PRv1B4RSze4+udscVbEJR3hSLTGXh3yYDkaA=
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEUCIQCgajzXggdP4r9QCFnxiq4NaPYem2Bo6G0dXvhVGgPD2wIgLMZVT82peVKw0m9Rnl7CwIGlpmVKnGO3+L/EFowrM50=
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/rolldown@1.2.2
+    dependencies:
+      '@oxc-project/types': =0.142.0
+      '@rolldown/pluginutils': ^1.0.0
+    bin:
+      rolldown: './bin/cli.mjs'
+    scripts:
+      '# Scrips for node #': _
+      build-browser-pkg:release: TARGET='browser' pnpm run --sequential '/^build-(binding:wasi:release|node)$/'
+      build-binding:release: pnpm build-binding --release
+      build-wasi:debug: TARGET='rolldown-wasi' pnpm run --sequential '/^build-(binding|binding:wasi|node)$/'
+      build-native:release: pnpm run --sequential '/^build-(binding:release|js-glue)$/'
+      build-binding:wasi:release: pnpm build-binding --profile release-wasi --target wasm32-wasip1-threads
+      build-binding: oxnode ./build-binding.ts
+      '# Scrips for docs #': _
+      '# Scrips for binding #': _
+      build-types-check: tsc -p ./tsconfig.check.json
+      build-native:debug: pnpm run --sequential '/^build-(binding|js-glue)$/'
+      build-js-glue: pnpm run --sequential '/^build-(node|types-check)$/'
+      build-binding:wasi: pnpm build-binding --target wasm32-wasip1-threads
+      build-wasi:release: TARGET='rolldown-wasi' pnpm run --sequential '/^build-(binding|binding:wasi:release|node)$/'
+      build-native:profile: pnpm run build-binding:profile && pnpm run build-js-glue
+      build-native:memory-profile: pnpm run build-binding:profile --features default_global_allocator && pnpm run build-js-glue
+      publint: publint .
+      build-browser-pkg:debug: TARGET='browser' pnpm run --sequential '/^build-(binding:wasi|node)$/'
+      build-node: node --enable-source-maps --import @oxc-node/core/register -C dev ./build.ts
+      artifacts: napi artifacts --cwd ./src --package-json-path ../package.json -o=../artifacts --npm-dir ../npm
+      build-binding:profile: pnpm build-binding --profile profile --features chrome-tracing
+    optional_dependencies:
+      '@rolldown/binding-win32-x64-msvc': '1.2.2'
+      '@rolldown/binding-linux-arm64-musl': '1.2.2'
+      '@rolldown/binding-linux-ppc64-gnu': '1.2.2'
+      '@rolldown/binding-darwin-arm64': '1.2.2'
+      '@rolldown/binding-linux-x64-musl': '1.2.2'
+      '@rolldown/binding-android-arm64': '1.2.2'
+      '@rolldown/binding-linux-arm-gnueabihf': '1.2.2'
+      '@rolldown/binding-win32-arm64-msvc': '1.2.2'
+      '@rolldown/binding-linux-x64-gnu': '1.2.2'
+      '@rolldown/binding-linux-arm64-gnu': '1.2.2'
+      '@rolldown/binding-darwin-x64': '1.2.2'
+      '@rolldown/binding-linux-s390x-gnu': '1.2.2'
+      '@rolldown/binding-freebsd-x64': '1.2.2'
+      '@rolldown/binding-openharmony-arm64': '1.2.2'
+    published_at: '2026-08-03T09:51:27.416Z'
+  '@types/react-dom@19.2.4':
+    resolution:
+      tarball: https://registry.npmjs.org/@types/react-dom/-/react-dom-19.2.4.tgz
+      shasum: '165ab5e97dfb081847b0f6755060cf40a3f6666b'
+      size: 0
+      unpackedSize: 30329
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEYCIQCowT7Ave5CdG+KhwxNbRs6N4cjI0jj6GAtIDf7YiC0XQIhAMxgD1xyHBwEmXYCmZ0SXd8WIz0a+KDWN8JfldOQJswQ
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEYCIQC8E04NNpgPwc4TyusJdEOpF1HCVl3D14nok9NJJ/dlpQIhAMSD/jgcFLYmmp5EkmBkLbteD5VgEKIDqJN9GPUBDuxF
+      npm-signature: null
+      attestations: null
+    dependencies: {}
+    bin: null
+    scripts: {}
+    optional_dependencies: null
+    published_at: '2026-07-30T21:53:05.684Z'
+  typescript@5.9.3:
+    resolution:
+      tarball: https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz
+      shasum: '5b4f59e15310ab17a216f5d6cf53ee476ede670f'
+      size: 0
+      unpackedSize: 23625066
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEYCIQC5ifNi1il+zAZC19ov+Q5oSrhOwlpOpghAaAAXYA0RpAIhAKdcZ6pMNZGuprpke8Zi3OPB1zol9c88KVW+apJNVjTy
+      npm-signature: null
+      attestations: null
+    dependencies: null
+    bin:
+      tsc: bin/tsc
+      tsserver: bin/tsserver
+    scripts:
+      gulp: hereby
+      build:compiler: hereby local
+      clean: hereby clean
+      build:tests:notypecheck: hereby tests --no-typecheck
+      lint: hereby lint
+      test: hereby runtests-parallel --light=false
+      test:eslint-rules: hereby run-eslint-rules-tests
+      setup-hooks: node scripts/link-hooks.mjs
+      build:tests: hereby tests
+      build: npm run build:compiler && npm run build:tests
+      knip: hereby knip
+      format: dprint fmt
+    optional_dependencies: null
+    published_at: '2025-09-30T21:19:38.784Z'
   '@rolldown/binding-win32-x64-msvc@1.2.2':
     resolution:
       tarball: https://registry.npmjs.org/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.2.2.tgz
@@ -116,256 +153,23 @@ packages:
     scripts: null
     optional_dependencies: null
     published_at: '2026-08-03T09:49:56.112Z'
-  '@jridgewell/remapping@2.3.5':
+  tailwindcss@4.3.3:
     resolution:
-      tarball: https://registry.npmjs.org/@jridgewell/remapping/-/remapping-2.3.5.tgz
-      shasum: '375c476d1972947851ba1e15ae8f123047445aa1'
+      tarball: https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.3.3.tgz
+      shasum: c006861611c213c1877893ab5b23daa16be2bb55
       size: 0
-      unpackedSize: 59366
+      unpackedSize: 772893
       signatures:
       - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIQDmnq5itLnV7/riJcHN0MZ4pwbZicCcpV9JGXDLgqWb+AIgak7hXSDglw9tX3DNlTtgq3jAG4XEYqiEx29bztRnx0Y=
-      npm-signature: null
-      attestations: null
-    dependencies:
-      '@jridgewell/gen-mapping': ^0.3.5
-      '@jridgewell/trace-mapping': ^0.3.24
-    bin: null
-    scripts: null
-    optional_dependencies: null
-    published_at: '2025-08-12T06:43:35.321Z'
-  jiti@2.7.0:
-    resolution:
-      tarball: https://registry.npmjs.org/jiti/-/jiti-2.7.0.tgz
-      shasum: '974228f2f4ca2bc21885a1797b45fea68e950c64'
-      size: 0
-      unpackedSize: 1751293
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEQCIE8EWcZV7Ll1AKCHeFXYhkVyPqcPbKjg2QPO8C5ylcw7AiASHS6m0T9biaCfJZVnQr8rHzksFERY3zNeN4NFLpCbeQ==
-      npm-signature: null
-      attestations: null
-    dependencies: null
-    bin:
-      jiti: lib/jiti-cli.mjs
-    scripts:
-      clean: rm -rf dist
-      release: pnpm build && pnpm test && changelogen --release --push && npm publish
-      test: pnpm lint && pnpm test:types && vitest run --coverage && pnpm test:node-register && pnpm test:bun && pnpm test:native
-      test:native:bun: bun --bun test test/native/bun.test.ts
-      test:node-register: JITI_JSX=1 node --test test/node-register.test.mjs
-      test:native:node: node --test --experimental-strip-types test/native/node.test.ts
-      bench: node test/bench.mjs && deno -A test/bench.mjs && bun --bun test/bench.mjs
-      test:native: pnpm test:native:bun && pnpm test:native:node && pnpm test:native:deno
-      test:types: tsgo --noEmit
-      prepack: pnpm build
-      test:native:deno: deno test -A --no-check test/native/deno.test.ts
-      lint:fix: eslint --fix . && prettier -w src lib test stubs
-      build: pnpm clean && pnpm rspack
-      jiti: JITI_DEBUG=1 JITI_JSX=1 lib/jiti-cli.mjs
-      lint: eslint . && prettier -c src lib test stubs
-      build:rolldown: pnpm clean && pnpm rolldown -c rolldown.config.mjs
-      dev: pnpm clean && pnpm rspack --watch
-      test:bun: bun --bun test test/bun
-    optional_dependencies: null
-    published_at: '2026-05-05T21:02:47.918Z'
-  enhanced-resolve@5.24.3:
-    resolution:
-      tarball: https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.24.3.tgz
-      shasum: '406bbf1ec20971265a30254f08030fce6a8207fe'
-      size: 0
-      unpackedSize: 415630
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEYCIQDxl9nW+s2XdZ52JrFXDwE5AK6BwVGDK7yd4UPN4ys0/gIhALPRoPn2JMlVS5Ngf/AmvrhrZdajrGW5YDz9HPKtqP1U
+        sig: MEQCIBhVHX/RChjUWt77CdssLibpRhMHsS3XWOKLRtP/ibJvAiBt9/qLAVxC6nR+eobWqzs5j/1ztHVMWGH0p/sMFj08bw==
       npm-signature: null
       attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/enhanced-resolve@5.24.3
-    dependencies:
-      tapable: ^2.3.3
-      graceful-fs: ^4.2.4
-    bin: null
-    scripts: null
-    optional_dependencies: null
-    published_at: '2026-07-20T05:39:14.104Z'
-  '@types/react-dom@19.2.4':
-    resolution:
-      tarball: https://registry.npmjs.org/@types/react-dom/-/react-dom-19.2.4.tgz
-      shasum: '165ab5e97dfb081847b0f6755060cf40a3f6666b'
-      size: 0
-      unpackedSize: 30329
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEYCIQCowT7Ave5CdG+KhwxNbRs6N4cjI0jj6GAtIDf7YiC0XQIhAMxgD1xyHBwEmXYCmZ0SXd8WIz0a+KDWN8JfldOQJswQ
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEYCIQC8E04NNpgPwc4TyusJdEOpF1HCVl3D14nok9NJJ/dlpQIhAMSD/jgcFLYmmp5EkmBkLbteD5VgEKIDqJN9GPUBDuxF
-      npm-signature: null
-      attestations: null
-    dependencies: {}
-    bin: null
-    scripts: {}
-    optional_dependencies: null
-    published_at: '2026-07-30T21:53:05.684Z'
-  '@types/react@19.2.18':
-    resolution:
-      tarball: https://registry.npmjs.org/@types/react/-/react-19.2.18.tgz
-      shasum: eb0b6a1fb635d1a9692d5f84a3495bd8ad153707
-      size: 0
-      unpackedSize: 408503
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIQC06rwtYwrTbroXM8/K/Ho6YJhoNJmdIFjoxFWeEj/j6gIgeockTz0xhiZ+AQJt29CbKYposjPSqDqD3Ql9EnIdV4c=
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIQDofJg2wXkQsGS14VbFVWmM6wtYK4mjgyw14jKRI9oW9AIgHEU5FA1hbVIL8AcOLevbx/7fWtsVOqmJ95kBksT8YDw=
-      npm-signature: null
-      attestations: null
-    dependencies:
-      csstype: ^3.2.2
-    bin: null
-    scripts: {}
-    optional_dependencies: null
-    published_at: '2026-07-30T21:54:03.456Z'
-  '@types/node@26.1.2':
-    resolution:
-      tarball: https://registry.npmjs.org/@types/node/-/node-26.1.2.tgz
-      shasum: da79708f1f9c6294f4cdec8f455a3032b028808a
-      size: 0
-      unpackedSize: 2445007
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIQDOTBld5paiUKoEN6A7qMlQFGnMiIXHnR8g8xjjXZFhAAIgWOeab+dc6bWfVzJunx7+9quhqx50qP8Yakre1YLUgJ0=
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIQC99mzMEtWxgvG6+nb1cA23+PnLc2ZFeSxK1fv3XjhzhwIgTvty+C9ADcBtpa4c3RmvWA30D6ARyc561BGu/vySaU0=
-      npm-signature: null
-      attestations: null
-    dependencies:
-      undici-types: ~8.3.0
-    bin: null
-    scripts: {}
-    optional_dependencies: null
-    published_at: '2026-07-27T17:32:14.992Z'
-  oxlint@1.77.0:
-    resolution:
-      tarball: https://registry.npmjs.org/oxlint/-/oxlint-1.77.0.tgz
-      shasum: d0556897632a742db8090487c9ee447475111a88
-      size: 0
-      unpackedSize: 2366460
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEYCIQCaqeujqgoP4jiS9GOK8JYNTPYXNdtH0W4TGh/sG3ptrQIhANZdZAmWsW7ysmEgXhY1PS4BJ58MWBePhfX0QyN9p8lo
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIEvxksrZ8hf+hwmOXCgw3/xhFOU64cCjditruek2V+gaAiEAqXiQVCnNcqoi/MAyeaVj1EPlWUfa+XKZvdD5yTHoZqg=
-      npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/oxlint@1.77.0
-    dependencies: null
-    bin:
-      oxlint: bin/oxlint
-    scripts: null
-    optional_dependencies:
-      '@oxlint/binding-android-arm-eabi': '1.77.0'
-      '@oxlint/binding-openharmony-arm64': '1.77.0'
-      '@oxlint/binding-linux-arm-musleabihf': '1.77.0'
-      '@oxlint/binding-linux-arm64-gnu': '1.77.0'
-      '@oxlint/binding-win32-arm64-msvc': '1.77.0'
-      '@oxlint/binding-win32-ia32-msvc': '1.77.0'
-      '@oxlint/binding-linux-s390x-gnu': '1.77.0'
-      '@oxlint/binding-linux-arm-gnueabihf': '1.77.0'
-      '@oxlint/binding-linux-arm64-musl': '1.77.0'
-      '@oxlint/binding-android-arm64': '1.77.0'
-      '@oxlint/binding-darwin-arm64': '1.77.0'
-      '@oxlint/binding-linux-riscv64-gnu': '1.77.0'
-      '@oxlint/binding-linux-x64-gnu': '1.77.0'
-      '@oxlint/binding-linux-x64-musl': '1.77.0'
-      '@oxlint/binding-win32-x64-msvc': '1.77.0'
-      '@oxlint/binding-freebsd-x64': '1.77.0'
-      '@oxlint/binding-darwin-x64': '1.77.0'
-      '@oxlint/binding-linux-riscv64-musl': '1.77.0'
-      '@oxlint/binding-linux-ppc64-gnu': '1.77.0'
-    published_at: '2026-08-03T12:08:03.773Z'
-  scheduler@0.27.0:
-    resolution:
-      tarball: https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz
-      shasum: '0c4ef82d67d1e5c1e359e8fc76d3a87f045fe5bd'
-      size: 0
-      unpackedSize: 82665
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIQCack5vHWKaO0QKERoq6u2nwR4oANQ9dLApCdNzJ7eJNgIgW7gYxV4eIWVrzAII08xKwzgRFPaa4iJFwfZAQWlUSsE=
-      npm-signature: null
-      attestations: null
+        url: https://registry.npmjs.org/-/npm/v1/attestations/tailwindcss@4.3.3
     dependencies: null
     bin: null
     scripts: null
     optional_dependencies: null
-    published_at: '2025-10-01T21:39:15.208Z'
-  picocolors@1.1.1:
-    resolution:
-      tarball: https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz
-      shasum: '3d321af3eab939b083c8f929a1d12cda81c26b6b'
-      size: 0
-      unpackedSize: 6373
-      signatures:
-      - keyid: SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA
-        sig: MEUCIQD1ga0Ghvdul0FY1X3tDEHWjLF2ImSjnhKBBPgfOq1CvAIgSrqciFjzA8uVTKSuA6NKBADmO/cxtGcYXQhHjD0U1Nw=
-      npm-signature: null
-      attestations: null
-    dependencies: null
-    bin: null
-    scripts: null
-    optional_dependencies: null
-    published_at: '2024-10-16T18:20:03.921Z'
-  tapable@2.3.3:
-    resolution:
-      tarball: https://registry.npmjs.org/tapable/-/tapable-2.3.3.tgz
-      shasum: '5da7c9992c46038221267985ab28421a8879f160'
-      size: 0
-      unpackedSize: 73418
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEYCIQCO4IKtVuajXyWWB5vPqkY8gMTIz+D/OH2cldumP9RbXQIhAKy3rk1uh4bmDBfUV79876tBYXlh5WySfjwcXvnt3n6R
-      npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/tapable@2.3.3
-    dependencies: null
-    bin: null
-    scripts: null
-    optional_dependencies: null
-    published_at: '2026-04-21T13:37:30.215Z'
-  '@jridgewell/gen-mapping@0.3.13':
-    resolution:
-      tarball: https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz
-      shasum: '6342a19f44347518c93e43b1ac69deb3c4656a1f'
-      size: 0
-      unpackedSize: 93797
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEYCIQCZS3dgBdG5uXwrzHb1UYb5NNdvaORTULbodpiz+zsgCgIhAPHtuiXeY1/emutgT7qTbyJLtsq305ywba6Hbp/g2ZjD
-      npm-signature: null
-      attestations: null
-    dependencies:
-      '@jridgewell/trace-mapping': ^0.3.24
-      '@jridgewell/sourcemap-codec': ^1.5.0
-    bin: null
-    scripts: null
-    optional_dependencies: null
-    published_at: '2025-08-12T06:43:21.134Z'
-  '@typescript/typescript-win32-x64@7.0.2':
-    resolution:
-      tarball: https://registry.npmjs.org/@typescript/typescript-win32-x64/-/typescript-win32-x64-7.0.2.tgz
-      shasum: cf3b7b0d6ce5635daca4c8e01c189cdcde47ec3c
-      size: 0
-      unpackedSize: 28365027
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEYCIQCejaFPdN4+nrJel8G4t696g8/DIzcEu88WSFGLH9Im1AIhAKf17fZYO91ZLCdVQe+waE51Qyf8HfJovH3mdbZ2aBAH
-      npm-signature: null
-      attestations: null
-    dependencies: null
-    bin: null
-    scripts: null
-    optional_dependencies: null
-    published_at: '2026-07-08T15:50:50.403Z'
+    published_at: '2026-07-16T12:03:35.267Z'
   '@oxc-project/types@0.142.0':
     resolution:
       tarball: https://registry.npmjs.org/@oxc-project/types/-/types-0.142.0.tgz
@@ -385,268 +189,70 @@ packages:
     scripts: null
     optional_dependencies: null
     published_at: '2026-07-27T15:09:58.744Z'
-  '@tailwindcss/node@4.3.3':
+  tapable@2.3.3:
     resolution:
-      tarball: https://registry.npmjs.org/@tailwindcss/node/-/node-4.3.3.tgz
-      shasum: '38ff04309ff036ea3589a7bad9069c44ec9d3883'
+      tarball: https://registry.npmjs.org/tapable/-/tapable-2.3.3.tgz
+      shasum: '5da7c9992c46038221267985ab28421a8879f160'
       size: 0
-      unpackedSize: 130939
+      unpackedSize: 73418
       signatures:
       - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIQCqvooHpZi1W1AeNSPjqaActLPPGgPTAmBWflkRq91NGQIgWdGvXRCXVDHqi2VHdSVAAQLYJG3G8VrDEWf9/+APyp8=
+        sig: MEYCIQCO4IKtVuajXyWWB5vPqkY8gMTIz+D/OH2cldumP9RbXQIhAKy3rk1uh4bmDBfUV79876tBYXlh5WySfjwcXvnt3n6R
       npm-signature: null
       attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/@tailwindcss%2fnode@4.3.3
-    dependencies:
-      enhanced-resolve: ^5.24.1
-      '@jridgewell/remapping': ^2.3.5
-      source-map-js: ^1.2.1
-      tailwindcss: '4.3.3'
-      magic-string: ^0.30.21
-      jiti: ^2.7.0
-      lightningcss: '1.32.0'
-    bin: null
-    scripts: null
-    optional_dependencies: null
-    published_at: '2026-07-16T12:03:45.588Z'
-  '@vitejs/plugin-react@6.0.5':
-    resolution:
-      tarball: https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-6.0.5.tgz
-      shasum: '48ee7951093ff9054952cff9d64e874355cde372'
-      size: 0
-      unpackedSize: 40242
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEQCIAOmpkZQ4bpSx7QtIycRg/lPc9Ci95OF5G4WHGkP+Y9dAiAS2R4moGY0FYsQXbt6UYzPhny9JuAVFFPyvIHcSUUj5w==
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIAp/CSWxxGQdcgtHnRepjAnJvtGUAkFxoOt49mHRlM3SAiEAr/JivZD/+VCr2sESePEumDpAXwCfogUyjAes3DjkV8g=
-      npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/@vitejs%2fplugin-react@6.0.5
-    dependencies:
-      '@rolldown/pluginutils': ^1.0.1
-    bin: null
-    scripts:
-      build: tsdown
-      dev: tsdown --watch ./src --watch ../common
-      test-unit: vitest run
-      prepublishOnly: npm run build
-    optional_dependencies: null
-    published_at: '2026-07-30T10:12:02.149Z'
-  lightningcss-win32-x64-msvc@1.33.0:
-    resolution:
-      tarball: https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.33.0.tgz
-      shasum: e343ae152eed3609dc6e11949d1a3bf39a1c946f
-      size: 0
-      unpackedSize: 9501288
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEYCIQDINInsR8G9+wXyYG70tPojp6swNaWq4zbpHnb9PlWabwIhAIKZS/JkUAuoYMZkqoLT+VzVp5NNabW1xyp7Ui6uAu2p
-      npm-signature: null
-      attestations: null
+        url: https://registry.npmjs.org/-/npm/v1/attestations/tapable@2.3.3
     dependencies: null
     bin: null
     scripts: null
     optional_dependencies: null
-    published_at: '2026-07-20T05:10:59.727Z'
-  '@rolldown/pluginutils@1.0.1':
+    published_at: '2026-04-21T13:37:30.215Z'
+  '@tailwindcss/oxide@4.3.3':
     resolution:
-      tarball: https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.1.tgz
-      shasum: e3fcee093fbb5ce765e1ad088ff4de2889f6f9be
+      tarball: https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.3.3.tgz
+      shasum: '6266109d025cfcb04f8e4c58954a6f630a415b7f'
       size: 0
-      unpackedSize: 25693
+      unpackedSize: 29502
       signatures:
       - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEYCIQDQ0Lyya3Z8CcZJxerudS0l4oACvfeThFKatXyuPD7SYAIhAOm4iYf4/oCMfUA0RRHZ/lOAlti+xM+UBtu03aI1Z9k1
+        sig: MEUCIQDfoh40SFdKwOmL382MtobZdI3jtEeEBMg26aC7gWoWsAIgHnQzejwfwuIOunIuw3warKAhvqp9K5NSe6GUfz9QxLs=
       npm-signature: null
       attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/@rolldown%2fpluginutils@1.0.1
-    dependencies: null
-    bin: null
-    scripts:
-      build: tsdown
-      test:types: vitest --project pluginutils --typecheck.only
-      dev: tsdown --watch
-      test: vitest --project pluginutils
-    optional_dependencies: null
-    published_at: '2026-05-13T03:52:29.927Z'
-  tinyglobby@0.2.17:
-    resolution:
-      tarball: https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.17.tgz
-      shasum: '562a9a6c9eb2b3b123d39719f9af5bb44fcd7631'
-      size: 0
-      unpackedSize: 39288
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEQCIBb1NW/DoA5iHpC4dnAW9CHCT0c0lMzS25CHkJqC1tWbAiB00yQG3ibgdu0HOIG+aspYfvxV64FhOyM5JgsbphDGhg==
-      npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/tinyglobby@0.2.17
-    dependencies:
-      fdir: ^6.5.0
-      picomatch: ^4.0.4
-    bin: null
-    scripts:
-      test:coverage: node --test --experimental-test-coverage "test/**/*.ts"
-      check: biome check
-      format: biome format --write
-      bench: node benchmark/bench.ts
-      build: tsdown
-      check:fix: biome check --write --unsafe
-      test: node --test "test/**/*.ts"
-      typecheck: tsc --noEmit
-      test:only: node --test --test-only "test/**/*.ts"
-      bench:setup: node benchmark/setup.ts
-      lint: biome lint
-    optional_dependencies: null
-    published_at: '2026-05-30T19:57:21.717Z'
-  undici-types@8.3.0:
-    resolution:
-      tarball: https://registry.npmjs.org/undici-types/-/undici-types-8.3.0.tgz
-      shasum: '44e9fc9f3244648cdea35e4f9bb2d681e9410809'
-      size: 0
-      unpackedSize: 118441
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEYCIQDxMmf2PXGfhL72WiAZ3TCGjMAG/L20ToolKJIdndBObgIhAPyGtE6kuYtwHzoe3d2sAX1Y6Q7vM7CIJ/AzVVNEoxm1
-      npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/undici-types@8.3.0
+        url: https://registry.npmjs.org/-/npm/v1/attestations/@tailwindcss%2foxide@4.3.3
     dependencies: null
     bin: null
     scripts: null
-    optional_dependencies: null
-    published_at: '2026-05-14T17:06:13.732Z'
-  vite@8.2.0:
-    resolution:
-      tarball: https://registry.npmjs.org/vite/-/vite-8.2.0.tgz
-      shasum: '902fcd3dc0312f553c85b6cbc4625dcaca2d8df8'
-      size: 0
-      unpackedSize: 2327306
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEYCIQCVYvtNVpLUfBqiiE1pUmekGkj+xk+Xz81nLxI+jn0dYgIhAPwP9z3/6CQrGvUl5WChEs0THZtK5Q988mlLTwuIripS
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEQCIGUggv4xdcGkcTtj2PCQBp99vVvd/tfXOskydyx2Am9HAiA+jAkXp0gRQieLkqCwIgobWC2Gfa2fvzE0JigZvStVHw==
-      npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/vite@8.2.0
-    dependencies:
-      rolldown: ~1.2.0
-      postcss: ^8.5.23
-      picomatch: ^4.0.5
-      lightningcss: ^1.33.0
-      tinyglobby: ^0.2.17
-    bin:
-      vite: bin/vite.js
-    scripts:
-      build-types-check: tsc --project tsconfig.check.json
-      build-types-roll: rolldown --config rolldown.dts.config.ts
-      build-bundle: rolldown --config rolldown.config.ts
-      format: oxfmt
-      dev: premove dist && pnpm build-bundle -w
-      build: premove dist && pnpm build-bundle && pnpm build-types
-      generate-target: tsx scripts/generateTarget.ts
-      lint: eslint --cache --ext .ts src/**
-      typecheck: tsc && tsc -p src/node && tsc -p src/client && tsc -p src/module-runner && tsc -p src/shared && tsc -p src/node/__tests_dts__ && tsc -p src/module-runner/__tests_dts__
-      build-types: pnpm build-types-roll && pnpm build-types-check
     optional_dependencies:
-      fsevents: ~2.3.3
-    published_at: '2026-07-30T12:03:25.771Z'
-  csstype@3.2.3:
+      '@tailwindcss/oxide-win32-x64-msvc': '4.3.3'
+      '@tailwindcss/oxide-linux-x64-gnu': '4.3.3'
+      '@tailwindcss/oxide-darwin-x64': '4.3.3'
+      '@tailwindcss/oxide-wasm32-wasi': '4.3.3'
+      '@tailwindcss/oxide-linux-x64-musl': '4.3.3'
+      '@tailwindcss/oxide-win32-arm64-msvc': '4.3.3'
+      '@tailwindcss/oxide-linux-arm64-gnu': '4.3.3'
+      '@tailwindcss/oxide-freebsd-x64': '4.3.3'
+      '@tailwindcss/oxide-linux-arm64-musl': '4.3.3'
+      '@tailwindcss/oxide-linux-arm-gnueabihf': '4.3.3'
+      '@tailwindcss/oxide-darwin-arm64': '4.3.3'
+      '@tailwindcss/oxide-android-arm64': '4.3.3'
+    published_at: '2026-07-16T12:03:29.017Z'
+  '@jridgewell/gen-mapping@0.3.13':
     resolution:
-      tarball: https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz
-      shasum: ec48c0f3e993e50648c86da559e2610995cf989a
+      tarball: https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz
+      shasum: '6342a19f44347518c93e43b1ac69deb3c4656a1f'
       size: 0
-      unpackedSize: 1253449
+      unpackedSize: 93797
       signatures:
       - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIQCW+CNKJwot6/l093k7h2clXR0Ucofwk9ZTjRiRC02OjwIgAYsOZV+Mfm2Bj8yEH7GbF3VGBDmDxQtNVg0JE6wj8mo=
+        sig: MEYCIQCZS3dgBdG5uXwrzHb1UYb5NNdvaORTULbodpiz+zsgCgIhAPHtuiXeY1/emutgT7qTbyJLtsq305ywba6Hbp/g2ZjD
       npm-signature: null
       attestations: null
-    dependencies: null
-    bin: null
-    scripts:
-      build: tsx --inspect build.ts --start
-      release: release-it
-      prepublish: npm install --no-save --prefix __tests__ && npm install --no-save --prefix __tests__/__fixtures__
-      lazy: tsc && npm run lint
-      update: tsx update.ts
-      watch: tsx build.ts --watch
-      lint: eslint . --ext .js,.jsx,.ts,.tsx --fix
-      test: jest --runInBand
-      test:src: jest src.*.ts
-      pretty: prettier --write build.ts **/*.{ts,js,json,md}
-      test:dist: jest dist.*.ts --runInBand
-    optional_dependencies: null
-    published_at: '2025-11-17T11:42:27.045Z'
-  source-map-js@1.2.1:
-    resolution:
-      tarball: https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz
-      shasum: '1ce5650fddd87abc099eda37dcff024c2667ae46'
-      size: 0
-      unpackedSize: 139872
-      signatures:
-      - keyid: SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA
-        sig: MEQCIF7zHaog7N5XY2DykQjfGxUeAeVvRFqUB8sMKuD4ChEpAiB50o3vma1R3cIXK4qnyc0QLZHy4+HJnMWjhJr9mK4jnQ==
-      npm-signature: null
-      attestations: null
-    dependencies: null
+    dependencies:
+      '@jridgewell/trace-mapping': ^0.3.24
+      '@jridgewell/sourcemap-codec': ^1.5.0
     bin: null
     scripts: null
     optional_dependencies: null
-    published_at: '2024-09-08T16:22:55.645Z'
-  react@19.2.8:
-    resolution:
-      tarball: https://registry.npmjs.org/react/-/react-19.2.8.tgz
-      shasum: a80663dbb58d69c6fe3fd291d3cb324e8a7dff2d
-      size: 0
-      unpackedSize: 171598
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEYCIQCCmnis0gzyZIp8pPdpFV387Lljmx4ah4Pjs3dgMujpiwIhAPzEs2mi+AlgkTXXTDLnSQ9wtZK8R7ywMKY/mkKjCwVi
-      npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/react@19.2.8
-    dependencies: null
-    bin: null
-    scripts: null
-    optional_dependencies: null
-    published_at: '2026-07-21T15:41:28.716Z'
-  '@tailwindcss/oxide-win32-x64-msvc@4.3.3':
-    resolution:
-      tarball: https://registry.npmjs.org/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.3.3.tgz
-      shasum: ce4c663fef3b4fde67611a4c1391866f8c0aa79b
-      size: 0
-      unpackedSize: 3191981
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEQCIFyE247F7r/mNernQ38JyA/D0TId1SC2tlJQLALlpArjAiBGZYeU8cwDM9f1w7psrTw960qmk28GDD2MlsCnNr7ezQ==
-      npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/@tailwindcss%2foxide-win32-x64-msvc@4.3.3
-    dependencies: null
-    bin: null
-    scripts: null
-    optional_dependencies: null
-    published_at: '2026-07-16T12:03:24.526Z'
-  detect-libc@2.1.2:
-    resolution:
-      tarball: https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz
-      shasum: '689c5dcdc1900ef5583a4cb9f6d7b473742074ad'
-      size: 0
-      unpackedSize: 26437
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEQCIF1K2xLAn5hsm9ciKDdCTYG8t/RLfRhgxAP141A5a3u7AiBqAwFNw0gO55d7HBGPBEywWb+lelLcAZWszH90TSkiiw==
-      npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/detect-libc@2.1.2
-    dependencies: null
-    bin: null
-    scripts: null
-    optional_dependencies: null
-    published_at: '2025-10-05T12:46:33.077Z'
+    published_at: '2025-08-12T06:43:21.134Z'
   magic-string@0.30.21:
     resolution:
       tarball: https://registry.npmjs.org/magic-string/-/magic-string-0.30.21.tgz
@@ -665,6 +271,376 @@ packages:
     scripts: null
     optional_dependencies: null
     published_at: '2025-10-24T00:59:47.122Z'
+  undici-types@7.18.2:
+    resolution:
+      tarball: https://registry.npmjs.org/undici-types/-/undici-types-7.18.2.tgz
+      shasum: '29357a89e7b7ca4aef3bf0fd3fd0cd73884229e9'
+      size: 0
+      unpackedSize: 113515
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEUCIQD5C364i3Y05y5Osjd5bYFkpI3+0kFAWfOZSyEOpM99swIgW3YPnZhb0Wh0QxAZ1lJ5wEFa3MUAOvyq7irqMAWutJA=
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/undici-types@7.18.2
+    dependencies: null
+    bin: null
+    scripts: null
+    optional_dependencies: null
+    published_at: '2026-01-06T15:57:40.133Z'
+  '@oxlint/binding-win32-x64-msvc@1.77.0':
+    resolution:
+      tarball: https://registry.npmjs.org/@oxlint/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.77.0.tgz
+      shasum: '1b39c2f5141a556deebba7458c9e8be4cd4eb3bf'
+      size: 0
+      unpackedSize: 14250318
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEQCIDLpYkcq7PighZ7h2XBY7yVu8Pcun080qTFaV/OZsghPAiB1Zy4HGR+FvfiAOgeVrLezxTWugOksTT06im21InlGuQ==
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/@oxlint%2fbinding-win32-x64-msvc@1.77.0
+    dependencies: null
+    bin: null
+    scripts: null
+    optional_dependencies: null
+    published_at: '2026-08-03T12:06:29.696Z'
+  react-dom@19.2.8:
+    resolution:
+      tarball: https://registry.npmjs.org/react-dom/-/react-dom-19.2.8.tgz
+      shasum: '3b46b9eeda877cdff2cf13d2770fff4ae36c2ec2'
+      size: 0
+      unpackedSize: 7319407
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEUCIQCPmtf94IFkzqmoB7YuzdzCHLzlvRiMb8B+cW6Kx+UFcQIgLlRbtwvmh5S95mx+1iWuq0DjcFdyBkA4QVAgRqK9niQ=
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/react-dom@19.2.8
+    dependencies:
+      scheduler: ^0.27.0
+    bin: null
+    scripts: null
+    optional_dependencies: null
+    published_at: '2026-07-21T15:41:41.267Z'
+  '@jridgewell/remapping@2.3.5':
+    resolution:
+      tarball: https://registry.npmjs.org/@jridgewell/remapping/-/remapping-2.3.5.tgz
+      shasum: '375c476d1972947851ba1e15ae8f123047445aa1'
+      size: 0
+      unpackedSize: 59366
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEUCIQDmnq5itLnV7/riJcHN0MZ4pwbZicCcpV9JGXDLgqWb+AIgak7hXSDglw9tX3DNlTtgq3jAG4XEYqiEx29bztRnx0Y=
+      npm-signature: null
+      attestations: null
+    dependencies:
+      '@jridgewell/gen-mapping': ^0.3.5
+      '@jridgewell/trace-mapping': ^0.3.24
+    bin: null
+    scripts: null
+    optional_dependencies: null
+    published_at: '2025-08-12T06:43:35.321Z'
+  detect-libc@2.1.2:
+    resolution:
+      tarball: https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz
+      shasum: '689c5dcdc1900ef5583a4cb9f6d7b473742074ad'
+      size: 0
+      unpackedSize: 26437
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEQCIF1K2xLAn5hsm9ciKDdCTYG8t/RLfRhgxAP141A5a3u7AiBqAwFNw0gO55d7HBGPBEywWb+lelLcAZWszH90TSkiiw==
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/detect-libc@2.1.2
+    dependencies: null
+    bin: null
+    scripts: null
+    optional_dependencies: null
+    published_at: '2025-10-05T12:46:33.077Z'
+  lightningcss@1.33.0:
+    resolution:
+      tarball: https://registry.npmjs.org/lightningcss/-/lightningcss-1.33.0.tgz
+      shasum: c08867d71a79385c6e190214fd72fef3e5f95f0b
+      size: 0
+      unpackedSize: 513814
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEYCIQD6IxrcvTJjhhJlgfKe7RuFv5TmKSx2/oRjJFZ6rhFXsAIhAPzxReFHw+l4nMIgYtlaZJJJUFVgHCmzSnw1tHjX2ikY
+      npm-signature: null
+      attestations: null
+    dependencies:
+      detect-libc: ^2.0.3
+    bin: null
+    scripts:
+      website:start: parcel 'website/*.html' website/playground/index.html
+      build: node scripts/build.js && node scripts/build-flow.js
+      tsc: tsc -p node/tsconfig.json
+      test: uvu node/test
+      build-ast: cargo run --example schema --features jsonschema && node scripts/build-ast.js
+      prepublishOnly: node scripts/build-flow.js
+      prepare: patch-package
+      wasm:build-release: cargo build --target wasm32-unknown-unknown -p lightningcss_node --release && wasm-opt target/wasm32-unknown-unknown/release/lightningcss_node.wasm --asyncify --pass-arg=asyncify-imports@env.await_promise_sync -Oz -o wasm/lightningcss_node.wasm && node scripts/build-wasm.js
+      build-release: node scripts/build.js --release && node scripts/build-flow.js
+      wasm:build: cargo build --target wasm32-unknown-unknown -p lightningcss_node && wasm-opt target/wasm32-unknown-unknown/debug/lightningcss_node.wasm --asyncify --pass-arg=asyncify-imports@env.await_promise_sync -Oz -o wasm/lightningcss_node.wasm && node scripts/build-wasm.js
+      website:build: yarn wasm:build-release && parcel build 'website/*.html' website/playground/index.html
+    optional_dependencies:
+      lightningcss-darwin-arm64: '1.33.0'
+      lightningcss-freebsd-x64: '1.33.0'
+      lightningcss-linux-arm64-gnu: '1.33.0'
+      lightningcss-darwin-x64: '1.33.0'
+      lightningcss-linux-arm-gnueabihf: '1.33.0'
+      lightningcss-linux-arm64-musl: '1.33.0'
+      lightningcss-linux-x64-gnu: '1.33.0'
+      lightningcss-linux-x64-musl: '1.33.0'
+      lightningcss-android-arm64: '1.33.0'
+      lightningcss-win32-arm64-msvc: '1.33.0'
+      lightningcss-win32-x64-msvc: '1.33.0'
+    published_at: '2026-07-20T05:11:09.509Z'
+  csstype@3.2.3:
+    resolution:
+      tarball: https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz
+      shasum: ec48c0f3e993e50648c86da559e2610995cf989a
+      size: 0
+      unpackedSize: 1253449
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEUCIQCW+CNKJwot6/l093k7h2clXR0Ucofwk9ZTjRiRC02OjwIgAYsOZV+Mfm2Bj8yEH7GbF3VGBDmDxQtNVg0JE6wj8mo=
+      npm-signature: null
+      attestations: null
+    dependencies: null
+    bin: null
+    scripts:
+      pretty: prettier --write build.ts **/*.{ts,js,json,md}
+      lint: eslint . --ext .js,.jsx,.ts,.tsx --fix
+      watch: tsx build.ts --watch
+      test:dist: jest dist.*.ts --runInBand
+      test: jest --runInBand
+      build: tsx --inspect build.ts --start
+      test:src: jest src.*.ts
+      lazy: tsc && npm run lint
+      update: tsx update.ts
+      prepublish: npm install --no-save --prefix __tests__ && npm install --no-save --prefix __tests__/__fixtures__
+      release: release-it
+    optional_dependencies: null
+    published_at: '2025-11-17T11:42:27.045Z'
+  vite@8.2.0:
+    resolution:
+      tarball: https://registry.npmjs.org/vite/-/vite-8.2.0.tgz
+      shasum: '902fcd3dc0312f553c85b6cbc4625dcaca2d8df8'
+      size: 0
+      unpackedSize: 2327306
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEYCIQCVYvtNVpLUfBqiiE1pUmekGkj+xk+Xz81nLxI+jn0dYgIhAPwP9z3/6CQrGvUl5WChEs0THZtK5Q988mlLTwuIripS
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEQCIGUggv4xdcGkcTtj2PCQBp99vVvd/tfXOskydyx2Am9HAiA+jAkXp0gRQieLkqCwIgobWC2Gfa2fvzE0JigZvStVHw==
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/vite@8.2.0
+    dependencies:
+      lightningcss: ^1.33.0
+      rolldown: ~1.2.0
+      tinyglobby: ^0.2.17
+      picomatch: ^4.0.5
+      postcss: ^8.5.23
+    bin:
+      vite: bin/vite.js
+    scripts:
+      build: premove dist && pnpm build-bundle && pnpm build-types
+      build-types-check: tsc --project tsconfig.check.json
+      typecheck: tsc && tsc -p src/node && tsc -p src/client && tsc -p src/module-runner && tsc -p src/shared && tsc -p src/node/__tests_dts__ && tsc -p src/module-runner/__tests_dts__
+      build-types: pnpm build-types-roll && pnpm build-types-check
+      lint: eslint --cache --ext .ts src/**
+      build-bundle: rolldown --config rolldown.config.ts
+      dev: premove dist && pnpm build-bundle -w
+      build-types-roll: rolldown --config rolldown.dts.config.ts
+      generate-target: tsx scripts/generateTarget.ts
+      format: oxfmt
+    optional_dependencies:
+      fsevents: ~2.3.3
+    published_at: '2026-07-30T12:03:25.771Z'
+  picomatch@4.0.5:
+    resolution:
+      tarball: https://registry.npmjs.org/picomatch/-/picomatch-4.0.5.tgz
+      shasum: '51ea57a17d86f605f81039595fbc40ed06a55fab'
+      size: 0
+      unpackedSize: 92989
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEQCIFU4/XOraofxxhboVULtfabLCGBg+AHnYxrXA24ujf97AiBEa1mO9kH4+wkQz4R1MmC1ZdBYk7xA2FMUoHXJPRWqKA==
+      npm-signature: null
+      attestations: null
+    dependencies: null
+    bin: null
+    scripts: null
+    optional_dependencies: null
+    published_at: '2026-07-02T16:47:23.026Z'
+  fdir@6.5.0:
+    resolution:
+      tarball: https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz
+      shasum: ed2ab967a331ade62f18d077dae192684d50d350
+      size: 0
+      unpackedSize: 53291
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEQCIH0wQCebp2QVphslaYbOXNLLIEWXJQeu+SBQ98iHU/E8AiBf9S/FKNmKpLju7S0BR0jg8EK3+F2u9xc/b3pjZqiCQA==
+      npm-signature: null
+      attestations: null
+    dependencies: null
+    bin: null
+    scripts: null
+    optional_dependencies: null
+    published_at: '2025-08-14T16:56:03.948Z'
+  tinyglobby@0.2.17:
+    resolution:
+      tarball: https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.17.tgz
+      shasum: '562a9a6c9eb2b3b123d39719f9af5bb44fcd7631'
+      size: 0
+      unpackedSize: 39288
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEQCIBb1NW/DoA5iHpC4dnAW9CHCT0c0lMzS25CHkJqC1tWbAiB00yQG3ibgdu0HOIG+aspYfvxV64FhOyM5JgsbphDGhg==
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/tinyglobby@0.2.17
+    dependencies:
+      fdir: ^6.5.0
+      picomatch: ^4.0.4
+    bin: null
+    scripts:
+      bench:setup: node benchmark/setup.ts
+      build: tsdown
+      check: biome check
+      test:only: node --test --test-only "test/**/*.ts"
+      test: node --test "test/**/*.ts"
+      check:fix: biome check --write --unsafe
+      typecheck: tsc --noEmit
+      bench: node benchmark/bench.ts
+      lint: biome lint
+      test:coverage: node --test --experimental-test-coverage "test/**/*.ts"
+      format: biome format --write
+    optional_dependencies: null
+    published_at: '2026-05-30T19:57:21.717Z'
+  enhanced-resolve@5.24.3:
+    resolution:
+      tarball: https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.24.3.tgz
+      shasum: '406bbf1ec20971265a30254f08030fce6a8207fe'
+      size: 0
+      unpackedSize: 415630
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEYCIQDxl9nW+s2XdZ52JrFXDwE5AK6BwVGDK7yd4UPN4ys0/gIhALPRoPn2JMlVS5Ngf/AmvrhrZdajrGW5YDz9HPKtqP1U
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/enhanced-resolve@5.24.3
+    dependencies:
+      graceful-fs: ^4.2.4
+      tapable: ^2.3.3
+    bin: null
+    scripts: null
+    optional_dependencies: null
+    published_at: '2026-07-20T05:39:14.104Z'
+  picocolors@1.1.1:
+    resolution:
+      tarball: https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz
+      shasum: '3d321af3eab939b083c8f929a1d12cda81c26b6b'
+      size: 0
+      unpackedSize: 6373
+      signatures:
+      - keyid: SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA
+        sig: MEUCIQD1ga0Ghvdul0FY1X3tDEHWjLF2ImSjnhKBBPgfOq1CvAIgSrqciFjzA8uVTKSuA6NKBADmO/cxtGcYXQhHjD0U1Nw=
+      npm-signature: null
+      attestations: null
+    dependencies: null
+    bin: null
+    scripts: null
+    optional_dependencies: null
+    published_at: '2024-10-16T18:20:03.921Z'
+  scheduler@0.27.0:
+    resolution:
+      tarball: https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz
+      shasum: '0c4ef82d67d1e5c1e359e8fc76d3a87f045fe5bd'
+      size: 0
+      unpackedSize: 82665
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEUCIQCack5vHWKaO0QKERoq6u2nwR4oANQ9dLApCdNzJ7eJNgIgW7gYxV4eIWVrzAII08xKwzgRFPaa4iJFwfZAQWlUSsE=
+      npm-signature: null
+      attestations: null
+    dependencies: null
+    bin: null
+    scripts: null
+    optional_dependencies: null
+    published_at: '2025-10-01T21:39:15.208Z'
+  '@tailwindcss/oxide-win32-x64-msvc@4.3.3':
+    resolution:
+      tarball: https://registry.npmjs.org/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.3.3.tgz
+      shasum: ce4c663fef3b4fde67611a4c1391866f8c0aa79b
+      size: 0
+      unpackedSize: 3191981
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEQCIFyE247F7r/mNernQ38JyA/D0TId1SC2tlJQLALlpArjAiBGZYeU8cwDM9f1w7psrTw960qmk28GDD2MlsCnNr7ezQ==
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/@tailwindcss%2foxide-win32-x64-msvc@4.3.3
+    dependencies: null
+    bin: null
+    scripts: null
+    optional_dependencies: null
+    published_at: '2026-07-16T12:03:24.526Z'
+  jiti@2.7.0:
+    resolution:
+      tarball: https://registry.npmjs.org/jiti/-/jiti-2.7.0.tgz
+      shasum: '974228f2f4ca2bc21885a1797b45fea68e950c64'
+      size: 0
+      unpackedSize: 1751293
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEQCIE8EWcZV7Ll1AKCHeFXYhkVyPqcPbKjg2QPO8C5ylcw7AiASHS6m0T9biaCfJZVnQr8rHzksFERY3zNeN4NFLpCbeQ==
+      npm-signature: null
+      attestations: null
+    dependencies: null
+    bin:
+      jiti: lib/jiti-cli.mjs
+    scripts:
+      release: pnpm build && pnpm test && changelogen --release --push && npm publish
+      test:native:deno: deno test -A --no-check test/native/deno.test.ts
+      dev: pnpm clean && pnpm rspack --watch
+      lint: eslint . && prettier -c src lib test stubs
+      build: pnpm clean && pnpm rspack
+      bench: node test/bench.mjs && deno -A test/bench.mjs && bun --bun test/bench.mjs
+      jiti: JITI_DEBUG=1 JITI_JSX=1 lib/jiti-cli.mjs
+      test:native:node: node --test --experimental-strip-types test/native/node.test.ts
+      test:native:bun: bun --bun test test/native/bun.test.ts
+      prepack: pnpm build
+      clean: rm -rf dist
+      test:node-register: JITI_JSX=1 node --test test/node-register.test.mjs
+      test: pnpm lint && pnpm test:types && vitest run --coverage && pnpm test:node-register && pnpm test:bun && pnpm test:native
+      lint:fix: eslint --fix . && prettier -w src lib test stubs
+      test:types: tsgo --noEmit
+      test:native: pnpm test:native:bun && pnpm test:native:node && pnpm test:native:deno
+      build:rolldown: pnpm clean && pnpm rolldown -c rolldown.config.mjs
+      test:bun: bun --bun test test/bun
+    optional_dependencies: null
+    published_at: '2026-05-05T21:02:47.918Z'
+  '@jridgewell/resolve-uri@3.1.2':
+    resolution:
+      tarball: https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz
+      shasum: '7a0ee601f60f99a20c7c7c5ff0c80388c1189bd6'
+      size: 0
+      unpackedSize: 53153
+      signatures:
+      - keyid: SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA
+        sig: MEQCIEXppH+0BsrbWtra1kPPaPPmx9gUaehh6s6zaKjIHAFlAiBmQfkNGAwgSsvu0SsXAVHZi7isPYQkKaLUvLVGXwxCaw==
+      npm-signature: null
+      attestations: null
+    dependencies: null
+    bin: null
+    scripts: null
+    optional_dependencies: null
+    published_at: '2024-02-14T19:32:38.143Z'
   postcss@8.5.25:
     resolution:
       tarball: https://registry.npmjs.org/postcss/-/postcss-8.5.25.tgz
@@ -679,8 +655,8 @@ packages:
         url: https://registry.npmjs.org/-/npm/v1/attestations/postcss@8.5.25
     dependencies:
       source-map-js: ^1.2.1
-      picocolors: ^1.1.1
       nanoid: ^3.3.16
+      picocolors: ^1.1.1
     bin: null
     scripts: null
     optional_dependencies: null
@@ -703,191 +679,22 @@ packages:
     scripts: null
     optional_dependencies: null
     published_at: '2026-07-12T08:23:40.690Z'
-  '@tailwindcss/vite@4.3.3':
+  lightningcss-win32-x64-msvc@1.33.0:
     resolution:
-      tarball: https://registry.npmjs.org/@tailwindcss/vite/-/vite-4.3.3.tgz
-      shasum: '1f4037badcb5e6c6bb574d3d8a0172c83f26b97f'
+      tarball: https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.33.0.tgz
+      shasum: e343ae152eed3609dc6e11949d1a3bf39a1c946f
       size: 0
-      unpackedSize: 13509
+      unpackedSize: 9501288
       signatures:
       - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEQCIAiPWBXY0DZ2rAkCNr7Cjo7KhJ1O8aq5SFWPTZ/NPJhPAiA0/SteZVX1HoTmrKS0BoaUzk4kzLmst7+D0cvaf8a39g==
-      npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/@tailwindcss%2fvite@4.3.3
-    dependencies:
-      '@tailwindcss/oxide': '4.3.3'
-      '@tailwindcss/node': '4.3.3'
-      tailwindcss: '4.3.3'
-    bin: null
-    scripts:
-      build: tsup-node
-      dev: pnpm run build -- --watch
-    optional_dependencies: null
-    published_at: '2026-07-16T12:04:06.316Z'
-  '@jridgewell/resolve-uri@3.1.2':
-    resolution:
-      tarball: https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz
-      shasum: '7a0ee601f60f99a20c7c7c5ff0c80388c1189bd6'
-      size: 0
-      unpackedSize: 53153
-      signatures:
-      - keyid: SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA
-        sig: MEQCIEXppH+0BsrbWtra1kPPaPPmx9gUaehh6s6zaKjIHAFlAiBmQfkNGAwgSsvu0SsXAVHZi7isPYQkKaLUvLVGXwxCaw==
+        sig: MEYCIQDINInsR8G9+wXyYG70tPojp6swNaWq4zbpHnb9PlWabwIhAIKZS/JkUAuoYMZkqoLT+VzVp5NNabW1xyp7Ui6uAu2p
       npm-signature: null
       attestations: null
     dependencies: null
     bin: null
     scripts: null
     optional_dependencies: null
-    published_at: '2024-02-14T19:32:38.143Z'
-  tailwindcss@4.3.3:
-    resolution:
-      tarball: https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.3.3.tgz
-      shasum: c006861611c213c1877893ab5b23daa16be2bb55
-      size: 0
-      unpackedSize: 772893
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEQCIBhVHX/RChjUWt77CdssLibpRhMHsS3XWOKLRtP/ibJvAiBt9/qLAVxC6nR+eobWqzs5j/1ztHVMWGH0p/sMFj08bw==
-      npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/tailwindcss@4.3.3
-    dependencies: null
-    bin: null
-    scripts: null
-    optional_dependencies: null
-    published_at: '2026-07-16T12:03:35.267Z'
-  rolldown@1.2.2:
-    resolution:
-      tarball: https://registry.npmjs.org/rolldown/-/rolldown-1.2.2.tgz
-      shasum: f28076716936bceda05e0d0559502a5ceb0a6e9e
-      size: 0
-      unpackedSize: 835094
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIQCh/lYz9vCnqqXCsDFC2UEl6Fc2bVy7sk9Q2fGoZDSI/wIgDv6Rca7PRv1B4RSze4+udscVbEJR3hSLTGXh3yYDkaA=
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIQCgajzXggdP4r9QCFnxiq4NaPYem2Bo6G0dXvhVGgPD2wIgLMZVT82peVKw0m9Rnl7CwIGlpmVKnGO3+L/EFowrM50=
-      npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/rolldown@1.2.2
-    dependencies:
-      '@oxc-project/types': =0.142.0
-      '@rolldown/pluginutils': ^1.0.0
-    bin:
-      rolldown: './bin/cli.mjs'
-    scripts:
-      build-binding:wasi:release: pnpm build-binding --profile release-wasi --target wasm32-wasip1-threads
-      build-native:memory-profile: pnpm run build-binding:profile --features default_global_allocator && pnpm run build-js-glue
-      '# Scrips for binding #': _
-      publint: publint .
-      build-native:release: pnpm run --sequential '/^build-(binding:release|js-glue)$/'
-      build-wasi:release: TARGET='rolldown-wasi' pnpm run --sequential '/^build-(binding|binding:wasi:release|node)$/'
-      build-binding: oxnode ./build-binding.ts
-      build-js-glue: pnpm run --sequential '/^build-(node|types-check)$/'
-      build-node: node --enable-source-maps --import @oxc-node/core/register -C dev ./build.ts
-      '# Scrips for node #': _
-      build-native:debug: pnpm run --sequential '/^build-(binding|js-glue)$/'
-      build-wasi:debug: TARGET='rolldown-wasi' pnpm run --sequential '/^build-(binding|binding:wasi|node)$/'
-      artifacts: napi artifacts --cwd ./src --package-json-path ../package.json -o=../artifacts --npm-dir ../npm
-      build-binding:profile: pnpm build-binding --profile profile --features chrome-tracing
-      build-native:profile: pnpm run build-binding:profile && pnpm run build-js-glue
-      build-binding:wasi: pnpm build-binding --target wasm32-wasip1-threads
-      build-binding:release: pnpm build-binding --release
-      build-browser-pkg:debug: TARGET='browser' pnpm run --sequential '/^build-(binding:wasi|node)$/'
-      build-types-check: tsc -p ./tsconfig.check.json
-      build-browser-pkg:release: TARGET='browser' pnpm run --sequential '/^build-(binding:wasi:release|node)$/'
-      '# Scrips for docs #': _
-    optional_dependencies:
-      '@rolldown/binding-linux-x64-gnu': '1.2.2'
-      '@rolldown/binding-android-arm64': '1.2.2'
-      '@rolldown/binding-linux-arm-gnueabihf': '1.2.2'
-      '@rolldown/binding-darwin-x64': '1.2.2'
-      '@rolldown/binding-win32-arm64-msvc': '1.2.2'
-      '@rolldown/binding-darwin-arm64': '1.2.2'
-      '@rolldown/binding-linux-s390x-gnu': '1.2.2'
-      '@rolldown/binding-linux-arm64-gnu': '1.2.2'
-      '@rolldown/binding-freebsd-x64': '1.2.2'
-      '@rolldown/binding-openharmony-arm64': '1.2.2'
-      '@rolldown/binding-linux-arm64-musl': '1.2.2'
-      '@rolldown/binding-linux-x64-musl': '1.2.2'
-      '@rolldown/binding-win32-x64-msvc': '1.2.2'
-      '@rolldown/binding-linux-ppc64-gnu': '1.2.2'
-    published_at: '2026-08-03T09:51:27.416Z'
-  graceful-fs@4.2.11:
-    resolution:
-      tarball: https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz
-      shasum: '4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3'
-      size: 0
-      unpackedSize: 32535
-      signatures:
-      - keyid: SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA
-        sig: MEQCIGvrVOcn7hI1H803c2vtwpp2SWqq+i4Io7slvfmq5ALwAiBUkAIGXz4UnL+r6Mp2H+OE2q0DUtrViYowDGL171hm5w==
-      npm-signature: "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkE25LACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmo1Cw/+N8TlrsFr9s7NQc7VlIFHMU2rKzP4vToGXmp36eSQFnl6ovT2\r\nORy24D9wbXLJHjoK3OXXfJj05y29v8qiNIEVpSxrULuRhvK49Ck3KkOl8uCg\r\n8gmXQCDCnY3n4MsEQgiUH34r+xJHE1szyaO4asFcfoDWJzq+YkLX2bbNfgow\r\n2Qrv+cuqOJVT2jVXRieFhJd5FWCD9Y4U+nzzY39a+UzvJvpq30lhRgTqZfNW\r\nct6GJx6Td8Kvc5SQ+EwAiFTrp8DUfZrzqD+U+E/GuMLLj3bCczYCagndUU27\r\nf1PNUMkqeTFpjuduqsQQuyyoLFm6cvKU4llHOETAaVTZpUPS6iR9SE91cuQt\r\n+ABAuaxuGuEmLWWBSbaPeOI76+CJAQ4mjwwFEwRSPTUY7wfCuhis4YBzEISD\r\nrDwkGKXwQ2XpLymE9QMAAFc6mxO1WxRbnlaxgmZLBhJGKeRh7KRaQRtI0qIy\r\nPm6M2Tpp+JoFOFIKy5Q8AldLlWWL5zzo71jglrQrGytDwem1sYjGDozXfVgm\r\nfYFO4SV4y0gXeY2Z68y0g+S4BmP+JUWM5v4WCBJxm1gEmEzz4yLv7PXVx12R\r\n10binyrgUoOUUWC7qSeQaVwROIQI8dNhOjSvdOJ3Vlpk2+cebpStOgJ9/eyY\r\nX1M50AoJmZh/Yl4oqHc8jSU5i9HjwWGe4zE=\r\n=HvMs\r\n-----END PGP SIGNATURE-----\r\n"
-      attestations: null
-    dependencies: null
-    bin: null
-    scripts: null
-    optional_dependencies: null
-    published_at: '2023-03-16T19:30:19.323Z'
-  typescript@7.0.2:
-    resolution:
-      tarball: https://registry.npmjs.org/typescript/-/typescript-7.0.2.tgz
-      shasum: '9ec773d7954a8c182c17cc5bbd575aa28bc51582'
-      size: 0
-      unpackedSize: 2497498
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIHn8lVrLBbTJToaOcV3IJ0oVPREmFT5BhqmO2niVNCaSAiEAjbubGExGAYMSJN39iEgX/eDYhwBGnh/iyyGTRigXGjY=
-      npm-signature: null
-      attestations: null
-    dependencies:
-      '@typescript/typescript-linux-riscv64': '7.0.2'
-      '@typescript/typescript-aix-ppc64': '7.0.2'
-      '@typescript/typescript-linux-mips64el': '7.0.2'
-      '@typescript/typescript-win32-x64': '7.0.2'
-      '@typescript/typescript-win32-arm64': '7.0.2'
-      '@typescript/typescript-openbsd-arm64': '7.0.2'
-      '@typescript/typescript-linux-ppc64': '7.0.2'
-      '@typescript/typescript-darwin-arm64': '7.0.2'
-      '@typescript/typescript-linux-arm': '7.0.2'
-      '@typescript/typescript-linux-s390x': '7.0.2'
-      '@typescript/typescript-linux-arm64': '7.0.2'
-      '@typescript/typescript-freebsd-x64': '7.0.2'
-      '@typescript/typescript-linux-x64': '7.0.2'
-      '@typescript/typescript-darwin-x64': '7.0.2'
-      '@typescript/typescript-freebsd-arm64': '7.0.2'
-      '@typescript/typescript-openbsd-x64': '7.0.2'
-      '@typescript/typescript-linux-loong64': '7.0.2'
-      '@typescript/typescript-netbsd-x64': '7.0.2'
-      '@typescript/typescript-netbsd-arm64': '7.0.2'
-      '@typescript/typescript-sunos-x64': '7.0.2'
-    bin:
-      tsc: bin/tsc
-    scripts: null
-    optional_dependencies:
-      '@typescript/typescript-linux-riscv64': '7.0.2'
-      '@typescript/typescript-linux-mips64el': '7.0.2'
-      '@typescript/typescript-linux-s390x': '7.0.2'
-      '@typescript/typescript-win32-x64': '7.0.2'
-      '@typescript/typescript-win32-arm64': '7.0.2'
-      '@typescript/typescript-darwin-arm64': '7.0.2'
-      '@typescript/typescript-netbsd-x64': '7.0.2'
-      '@typescript/typescript-linux-x64': '7.0.2'
-      '@typescript/typescript-linux-ppc64': '7.0.2'
-      '@typescript/typescript-linux-arm64': '7.0.2'
-      '@typescript/typescript-sunos-x64': '7.0.2'
-      '@typescript/typescript-openbsd-arm64': '7.0.2'
-      '@typescript/typescript-linux-loong64': '7.0.2'
-      '@typescript/typescript-aix-ppc64': '7.0.2'
-      '@typescript/typescript-openbsd-x64': '7.0.2'
-      '@typescript/typescript-darwin-x64': '7.0.2'
-      '@typescript/typescript-freebsd-arm64': '7.0.2'
-      '@typescript/typescript-linux-arm': '7.0.2'
-      '@typescript/typescript-netbsd-arm64': '7.0.2'
-      '@typescript/typescript-freebsd-x64': '7.0.2'
-    published_at: '2026-07-08T15:55:18.431Z'
+    published_at: '2026-07-20T05:10:59.727Z'
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution:
       tarball: https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz
@@ -904,57 +711,142 @@ packages:
     scripts: null
     optional_dependencies: null
     published_at: '2025-08-12T06:43:59.139Z'
-  react-dom@19.2.8:
+  '@types/react@19.2.18':
     resolution:
-      tarball: https://registry.npmjs.org/react-dom/-/react-dom-19.2.8.tgz
-      shasum: '3b46b9eeda877cdff2cf13d2770fff4ae36c2ec2'
+      tarball: https://registry.npmjs.org/@types/react/-/react-19.2.18.tgz
+      shasum: eb0b6a1fb635d1a9692d5f84a3495bd8ad153707
       size: 0
-      unpackedSize: 7319407
+      unpackedSize: 408503
       signatures:
       - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEUCIQCPmtf94IFkzqmoB7YuzdzCHLzlvRiMb8B+cW6Kx+UFcQIgLlRbtwvmh5S95mx+1iWuq0DjcFdyBkA4QVAgRqK9niQ=
+        sig: MEUCIQC06rwtYwrTbroXM8/K/Ho6YJhoNJmdIFjoxFWeEj/j6gIgeockTz0xhiZ+AQJt29CbKYposjPSqDqD3Ql9EnIdV4c=
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEUCIQDofJg2wXkQsGS14VbFVWmM6wtYK4mjgyw14jKRI9oW9AIgHEU5FA1hbVIL8AcOLevbx/7fWtsVOqmJ95kBksT8YDw=
       npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/react-dom@19.2.8
+      attestations: null
     dependencies:
-      scheduler: ^0.27.0
+      csstype: ^3.2.2
     bin: null
-    scripts: null
+    scripts: {}
     optional_dependencies: null
-    published_at: '2026-07-21T15:41:41.267Z'
-  '@oxlint/binding-win32-x64-msvc@1.77.0':
+    published_at: '2026-07-30T21:54:03.456Z'
+  graceful-fs@4.2.11:
     resolution:
-      tarball: https://registry.npmjs.org/@oxlint/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.77.0.tgz
-      shasum: '1b39c2f5141a556deebba7458c9e8be4cd4eb3bf'
+      tarball: https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz
+      shasum: '4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3'
       size: 0
-      unpackedSize: 14250318
+      unpackedSize: 32535
       signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEQCIDLpYkcq7PighZ7h2XBY7yVu8Pcun080qTFaV/OZsghPAiB1Zy4HGR+FvfiAOgeVrLezxTWugOksTT06im21InlGuQ==
-      npm-signature: null
-      attestations:
-        url: https://registry.npmjs.org/-/npm/v1/attestations/@oxlint%2fbinding-win32-x64-msvc@1.77.0
-    dependencies: null
-    bin: null
-    scripts: null
-    optional_dependencies: null
-    published_at: '2026-08-03T12:06:29.696Z'
-  fdir@6.5.0:
-    resolution:
-      tarball: https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz
-      shasum: ed2ab967a331ade62f18d077dae192684d50d350
-      size: 0
-      unpackedSize: 53291
-      signatures:
-      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
-        sig: MEQCIH0wQCebp2QVphslaYbOXNLLIEWXJQeu+SBQ98iHU/E8AiBf9S/FKNmKpLju7S0BR0jg8EK3+F2u9xc/b3pjZqiCQA==
-      npm-signature: null
+      - keyid: SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA
+        sig: MEQCIGvrVOcn7hI1H803c2vtwpp2SWqq+i4Io7slvfmq5ALwAiBUkAIGXz4UnL+r6Mp2H+OE2q0DUtrViYowDGL171hm5w==
+      npm-signature: "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkE25LACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmo1Cw/+N8TlrsFr9s7NQc7VlIFHMU2rKzP4vToGXmp36eSQFnl6ovT2\r\nORy24D9wbXLJHjoK3OXXfJj05y29v8qiNIEVpSxrULuRhvK49Ck3KkOl8uCg\r\n8gmXQCDCnY3n4MsEQgiUH34r+xJHE1szyaO4asFcfoDWJzq+YkLX2bbNfgow\r\n2Qrv+cuqOJVT2jVXRieFhJd5FWCD9Y4U+nzzY39a+UzvJvpq30lhRgTqZfNW\r\nct6GJx6Td8Kvc5SQ+EwAiFTrp8DUfZrzqD+U+E/GuMLLj3bCczYCagndUU27\r\nf1PNUMkqeTFpjuduqsQQuyyoLFm6cvKU4llHOETAaVTZpUPS6iR9SE91cuQt\r\n+ABAuaxuGuEmLWWBSbaPeOI76+CJAQ4mjwwFEwRSPTUY7wfCuhis4YBzEISD\r\nrDwkGKXwQ2XpLymE9QMAAFc6mxO1WxRbnlaxgmZLBhJGKeRh7KRaQRtI0qIy\r\nPm6M2Tpp+JoFOFIKy5Q8AldLlWWL5zzo71jglrQrGytDwem1sYjGDozXfVgm\r\nfYFO4SV4y0gXeY2Z68y0g+S4BmP+JUWM5v4WCBJxm1gEmEzz4yLv7PXVx12R\r\n10binyrgUoOUUWC7qSeQaVwROIQI8dNhOjSvdOJ3Vlpk2+cebpStOgJ9/eyY\r\nX1M50AoJmZh/Yl4oqHc8jSU5i9HjwWGe4zE=\r\n=HvMs\r\n-----END PGP SIGNATURE-----\r\n"
       attestations: null
     dependencies: null
     bin: null
     scripts: null
     optional_dependencies: null
-    published_at: '2025-08-14T16:56:03.948Z'
+    published_at: '2023-03-16T19:30:19.323Z'
+  react@19.2.8:
+    resolution:
+      tarball: https://registry.npmjs.org/react/-/react-19.2.8.tgz
+      shasum: a80663dbb58d69c6fe3fd291d3cb324e8a7dff2d
+      size: 0
+      unpackedSize: 171598
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEYCIQCCmnis0gzyZIp8pPdpFV387Lljmx4ah4Pjs3dgMujpiwIhAPzEs2mi+AlgkTXXTDLnSQ9wtZK8R7ywMKY/mkKjCwVi
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/react@19.2.8
+    dependencies: null
+    bin: null
+    scripts: null
+    optional_dependencies: null
+    published_at: '2026-07-21T15:41:28.716Z'
+  '@types/node@24.13.3':
+    resolution:
+      tarball: https://registry.npmjs.org/@types/node/-/node-24.13.3.tgz
+      shasum: '49f18bd3c647866dcda51a0756c145e14590ce16'
+      size: 0
+      unpackedSize: 2543416
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEQCIGgJ8r+L6Z6Xu+2aQ8S3/KEBDr75GiLCtNB8LRDg54yUAiBuOuxd6C8fKX/MgVr/4znqgiZKcOMm8x/HcK6geGJgmQ==
+      npm-signature: null
+      attestations: null
+    dependencies:
+      undici-types: ~7.18.0
+    bin: null
+    scripts: {}
+    optional_dependencies: null
+    published_at: '2026-07-08T06:48:03.261Z'
+  '@rolldown/pluginutils@1.0.1':
+    resolution:
+      tarball: https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.1.tgz
+      shasum: e3fcee093fbb5ce765e1ad088ff4de2889f6f9be
+      size: 0
+      unpackedSize: 25693
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEYCIQDQ0Lyya3Z8CcZJxerudS0l4oACvfeThFKatXyuPD7SYAIhAOm4iYf4/oCMfUA0RRHZ/lOAlti+xM+UBtu03aI1Z9k1
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/@rolldown%2fpluginutils@1.0.1
+    dependencies: null
+    bin: null
+    scripts:
+      test: vitest --project pluginutils
+      build: tsdown
+      test:types: vitest --project pluginutils --typecheck.only
+      dev: tsdown --watch
+    optional_dependencies: null
+    published_at: '2026-05-13T03:52:29.927Z'
+  '@tailwindcss/vite@4.3.3':
+    resolution:
+      tarball: https://registry.npmjs.org/@tailwindcss/vite/-/vite-4.3.3.tgz
+      shasum: '1f4037badcb5e6c6bb574d3d8a0172c83f26b97f'
+      size: 0
+      unpackedSize: 13509
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEQCIAiPWBXY0DZ2rAkCNr7Cjo7KhJ1O8aq5SFWPTZ/NPJhPAiA0/SteZVX1HoTmrKS0BoaUzk4kzLmst7+D0cvaf8a39g==
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/@tailwindcss%2fvite@4.3.3
+    dependencies:
+      '@tailwindcss/oxide': '4.3.3'
+      tailwindcss: '4.3.3'
+      '@tailwindcss/node': '4.3.3'
+    bin: null
+    scripts:
+      build: tsup-node
+      dev: pnpm run build -- --watch
+    optional_dependencies: null
+    published_at: '2026-07-16T12:04:06.316Z'
+  '@vitejs/plugin-react@6.0.5':
+    resolution:
+      tarball: https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-6.0.5.tgz
+      shasum: '48ee7951093ff9054952cff9d64e874355cde372'
+      size: 0
+      unpackedSize: 40242
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEQCIAOmpkZQ4bpSx7QtIycRg/lPc9Ci95OF5G4WHGkP+Y9dAiAS2R4moGY0FYsQXbt6UYzPhny9JuAVFFPyvIHcSUUj5w==
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEUCIAp/CSWxxGQdcgtHnRepjAnJvtGUAkFxoOt49mHRlM3SAiEAr/JivZD/+VCr2sESePEumDpAXwCfogUyjAes3DjkV8g=
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/@vitejs%2fplugin-react@6.0.5
+    dependencies:
+      '@rolldown/pluginutils': ^1.0.1
+    bin: null
+    scripts:
+      dev: tsdown --watch ./src --watch ../common
+      test-unit: vitest run
+      build: tsdown
+      prepublishOnly: npm run build
+    optional_dependencies: null
+    published_at: '2026-07-30T10:12:02.149Z'
   '@jridgewell/trace-mapping@0.3.31':
     resolution:
       tarball: https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.31.tgz
@@ -973,3 +865,66 @@ packages:
     scripts: null
     optional_dependencies: null
     published_at: '2025-09-10T20:12:49.468Z'
+  '@tailwindcss/node@4.3.3':
+    resolution:
+      tarball: https://registry.npmjs.org/@tailwindcss/node/-/node-4.3.3.tgz
+      shasum: '38ff04309ff036ea3589a7bad9069c44ec9d3883'
+      size: 0
+      unpackedSize: 130939
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEUCIQCqvooHpZi1W1AeNSPjqaActLPPGgPTAmBWflkRq91NGQIgWdGvXRCXVDHqi2VHdSVAAQLYJG3G8VrDEWf9/+APyp8=
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/@tailwindcss%2fnode@4.3.3
+    dependencies:
+      jiti: ^2.7.0
+      magic-string: ^0.30.21
+      source-map-js: ^1.2.1
+      tailwindcss: '4.3.3'
+      '@jridgewell/remapping': ^2.3.5
+      lightningcss: '1.32.0'
+      enhanced-resolve: ^5.24.1
+    bin: null
+    scripts: null
+    optional_dependencies: null
+    published_at: '2026-07-16T12:03:45.588Z'
+  oxlint@1.77.0:
+    resolution:
+      tarball: https://registry.npmjs.org/oxlint/-/oxlint-1.77.0.tgz
+      shasum: d0556897632a742db8090487c9ee447475111a88
+      size: 0
+      unpackedSize: 2366460
+      signatures:
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEYCIQCaqeujqgoP4jiS9GOK8JYNTPYXNdtH0W4TGh/sG3ptrQIhANZdZAmWsW7ysmEgXhY1PS4BJ58MWBePhfX0QyN9p8lo
+      - keyid: SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U
+        sig: MEUCIEvxksrZ8hf+hwmOXCgw3/xhFOU64cCjditruek2V+gaAiEAqXiQVCnNcqoi/MAyeaVj1EPlWUfa+XKZvdD5yTHoZqg=
+      npm-signature: null
+      attestations:
+        url: https://registry.npmjs.org/-/npm/v1/attestations/oxlint@1.77.0
+    dependencies: null
+    bin:
+      oxlint: bin/oxlint
+    scripts: null
+    optional_dependencies:
+      '@oxlint/binding-linux-arm64-gnu': '1.77.0'
+      '@oxlint/binding-linux-riscv64-musl': '1.77.0'
+      '@oxlint/binding-android-arm64': '1.77.0'
+      '@oxlint/binding-win32-ia32-msvc': '1.77.0'
+      '@oxlint/binding-linux-ppc64-gnu': '1.77.0'
+      '@oxlint/binding-linux-x64-gnu': '1.77.0'
+      '@oxlint/binding-linux-s390x-gnu': '1.77.0'
+      '@oxlint/binding-win32-x64-msvc': '1.77.0'
+      '@oxlint/binding-linux-x64-musl': '1.77.0'
+      '@oxlint/binding-openharmony-arm64': '1.77.0'
+      '@oxlint/binding-linux-arm-musleabihf': '1.77.0'
+      '@oxlint/binding-win32-arm64-msvc': '1.77.0'
+      '@oxlint/binding-linux-arm64-musl': '1.77.0'
+      '@oxlint/binding-linux-arm-gnueabihf': '1.77.0'
+      '@oxlint/binding-darwin-arm64': '1.77.0'
+      '@oxlint/binding-freebsd-x64': '1.77.0'
+      '@oxlint/binding-darwin-x64': '1.77.0'
+      '@oxlint/binding-linux-riscv64-gnu': '1.77.0'
+      '@oxlint/binding-android-arm-eabi': '1.77.0'
+    published_at: '2026-08-03T12:08:03.773Z'
