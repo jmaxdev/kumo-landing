@@ -208,7 +208,7 @@ RUN kumo runtime use 22
 
 WORKDIR /app
 COPY package.json kumo.lock* ./
-RUN kumo install
+RUN kumo fetch && kumo ci
 
 COPY . .
 CMD ["start"]`
@@ -236,13 +236,5 @@ export const FOOTER_LINKS = [
       { label: 'Benchmark', href: `${BRAND.github}/blob/main/app/docs/benchmark.md` },
       { label: 'Contributing', href: `${BRAND.github}/blob/main/app/docs/contributing.md` },
     ],
-  },
-  {
-    title: 'Install',
-    links: [
-      { label: 'install.sh', href: BRAND.installSh },
-      { label: 'install.ps1', href: BRAND.installPs1 },
-      { label: 'Docker Image', href: `https://${BRAND.docker}` },
-    ],
-  },
+  }
 ]
