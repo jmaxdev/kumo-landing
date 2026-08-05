@@ -1,0 +1,11 @@
+services:
+  solaris-docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+ 
+    restart: unless-stopped
+    ports:
+      - 80
+    environment:
+      - NODE_ENV=production

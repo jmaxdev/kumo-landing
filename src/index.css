@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #E8611A;
+  --color-brand-50: #FEF3EC;
+  --color-brand-100: #FCE0CC;
+  --color-brand-200: #F8C19A;
+  --color-brand-300: #F39E62;
+  --color-brand-400: #EE7E36;
+  --color-brand-500: #E8611A;
+  --color-brand-600: #B84810;
+  --color-brand-700: #8A360C;
+  --color-brand-800: #5C2408;
+  --color-brand-900: #2E1204;
+
+  --color-bg: #0B0F19;
+  --color-bg-card: #111827;
+  --color-bg-elevated: #1F2937;
+
+  --color-text: #F1F5F9;
+  --color-text-muted: #94A3B8;
+  --color-text-dim: #64748B;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Consolas', monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  ::selection {
+    background-color: var(--color-brand);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .bg-grid-mask {
+    mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, black 30%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, black 30%, transparent 80%);
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, #F39E62 0%, #E8611A 50%, #B84810 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .glow-brand {
+    box-shadow: 0 0 40px -8px rgba(232, 97, 26, 0.5);
+  }
+  .border-glow {
+    box-shadow: 0 0 0 1px rgba(232, 97, 26, 0.3), 0 0 30px -10px rgba(232, 97, 26, 0.6);
+  }
+  .animate-float {
+    animation: float 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+  }
+  @keyframes float {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -10px, 0); }
+  }
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+    will-change: opacity;
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+  }
+}
