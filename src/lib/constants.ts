@@ -2,8 +2,8 @@
 // Centralized here for easy updates.
 
 export const BRAND = {
-  name: 'Kumo',
-  tagline: 'The package manager that protects your supply chain',
+  name: 'Kumo', 
+  tagline: 'The fast package manager built for supply chain security',
   description:
     'High-performance dependency management with BLAKE3 caching, OS-level sandboxing, and proactive vulnerability scanning — written in Rust.',
   github: 'https://github.com/jmaxdev/Kumo',
