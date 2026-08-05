@@ -6,7 +6,7 @@ RUN kumo runtime use 24
 WORKDIR /app
 
 # Copy package definition and kumo config
-COPY package.json kumo.config.json ./
+COPY package.json kumo.config.json* ./
 
 # Install dependencies inside container
 RUN kumo install
