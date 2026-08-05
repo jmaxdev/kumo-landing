@@ -2,17 +2,22 @@ import { FEATURES } from '../../lib/constants'
 
 export function Features() {
   return (
-    <section id="features" className="py-20 md:py-28 border-t border-slate-800/60">
+    <section
+      id="features"
+      aria-labelledby="features-heading"
+      className="py-20 md:py-28 border-t border-slate-800/60"
+    >
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <p className="text-sm font-semibold uppercase tracking-widest text-brand mb-3">
             Features
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Everything a modern package manager should be
+          <h2 id="features-heading" className="text-3xl md:text-4xl font-bold mb-4">
+            Node.js package manager features built for speed and safety
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Caching, security, and developer experience — designed in Rust from the ground up.
+            Content-addressable caching, supply chain security, and a modern developer experience —
+            designed in Rust from the ground up.
           </p>
         </div>
 

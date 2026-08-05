@@ -2,10 +2,11 @@
 // Centralized here for easy updates.
 
 export const BRAND = {
-  name: 'Kumo', 
-  tagline: 'The fast package manager built for supply chain security',
+  name: 'Kumo',
+  // Primary SEO phrase: package manager for Node.js + security
+  tagline: 'The fast, security-first package manager for Node.js',
   description:
-    'High-performance dependency management with BLAKE3 caching, OS-level sandboxing, and proactive vulnerability scanning — written in Rust.',
+    'High-performance dependency management for JavaScript and TypeScript with BLAKE3 caching, OS-level sandboxing, and proactive vulnerability scanning — written in Rust.',
   github: 'https://github.com/jmaxdev/Kumo',
   site: 'https://kumo.jmaxdev.site',
   docs: 'https://github.com/jmaxdev/Kumo/blob/main/app/docs/kumo.md',
@@ -14,6 +15,13 @@ export const BRAND = {
   docker: 'ghcr.io/jmaxdev/kumo',
   version: '1.0.4',
   license: 'UPL 1.0',
+}
+
+/** SEO document title / social share (keep in sync with index.html) */
+export const SEO = {
+  title: 'Kumo — Fast Package Manager for Node.js | Security-First',
+  description:
+    'Kumo is a high-performance package manager for Node.js written in Rust. BLAKE3 caching, OS-level sandboxing, typosquatting protection, and OSV vulnerability scanning.',
 }
 
 export const NAV_LINKS = [
@@ -51,7 +59,7 @@ export const PROBLEMS = [
     icon: '🐌',
     title: 'Installs that take forever',
     description:
-      'Most package managers re-download the same tarballs for every project, wasting bandwidth and disk space.',
+      'Most Node.js package managers re-download the same tarballs for every project, wasting bandwidth and disk space.',
   },
   {
     icon: '⚠️',
@@ -63,7 +71,7 @@ export const PROBLEMS = [
     icon: '💾',
     title: 'Disk bloat',
     description:
-      'Hundreds of megabytes of duplicated dependencies across projects, with no deduplication.',
+      'Hundreds of megabytes of duplicated dependencies across projects, with no content-addressable deduplication.',
   },
 ]
 
@@ -236,5 +244,5 @@ export const FOOTER_LINKS = [
       { label: 'Benchmark', href: `${BRAND.github}/blob/main/app/docs/benchmark.md` },
       { label: 'Contributing', href: `${BRAND.github}/blob/main/app/docs/contributing.md` },
     ],
-  }
+  },
 ]

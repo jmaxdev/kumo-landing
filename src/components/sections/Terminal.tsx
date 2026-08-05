@@ -31,18 +31,21 @@ function renderLine(line: Line, i: number) {
 
 export function Terminal() {
   return (
-    <section className="py-20 md:py-28 border-t border-slate-800/60">
+    <section
+      aria-labelledby="terminal-heading"
+      className="py-20 md:py-28 border-t border-slate-800/60"
+    >
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-14">
           <p className="text-sm font-semibold uppercase tracking-widest text-brand mb-3">
             See it in action
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Familiar commands, supercharged output
+          <h2 id="terminal-heading" className="text-3xl md:text-4xl font-bold mb-4">
+            Familiar package manager commands, supercharged output
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Drop-in compatibility with the npm CLI, with security scans and cache hits
-            built into every step.
+            Drop-in familiarity with common npm-style CLI workflows, with security scans and cache
+            hits built into every step.
           </p>
         </div>
 

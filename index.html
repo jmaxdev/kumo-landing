@@ -2,18 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Kumo — a high-performance, security-first package manager for Node.js, written in Rust. BLAKE3 caching, OS-level sandboxing, vulnerability scanning." />
+
+    <!-- Primary SEO -->
+    <title>Kumo — Fast Package Manager for Node.js | Security-First</title>
+    <meta
+      name="description"
+      content="Kumo is a high-performance package manager for Node.js written in Rust. BLAKE3 caching, OS-level sandboxing, typosquatting protection, and OSV vulnerability scanning."
+    />
+    <meta
+      name="keywords"
+      content="Kumo, package manager, Node.js package manager, JavaScript package manager, npm alternative, dependency management, supply chain security, BLAKE3, Rust package manager, OSV scanning, sandbox"
+    />
+    <meta name="author" content="JMaxdev" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
     <meta name="theme-color" content="#0B0F19" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://kumo.jmaxdev.site/" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="apple-touch-icon" href="/icon.png" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Kumo — Security-first package manager for Node.js" />
-    <meta property="og:description" content="High-performance dependency management with BLAKE3 caching, OS-level sandboxing, and proactive vulnerability scanning — written in Rust." />
-    <meta property="og:image" content="/icon.png" />
+    <meta property="og:site_name" content="Kumo" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://kumo.jmaxdev.site/" />
+    <meta property="og:title" content="Kumo — Fast Package Manager for Node.js | Security-First" />
+    <meta
+      property="og:description"
+      content="High-performance Node.js package manager with BLAKE3 caching, OS-level sandboxing, and proactive vulnerability scanning — written in Rust."
+    />
+    <meta property="og:image" content="https://kumo.jmaxdev.site/icon.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1096" />
+    <meta property="og:image:alt" content="Kumo package manager logo" />
 
-    <!-- Google Fonts -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Kumo — Fast Package Manager for Node.js | Security-First" />
+    <meta
+      name="twitter:description"
+      content="High-performance Node.js package manager with BLAKE3 caching, OS-level sandboxing, and proactive vulnerability scanning — written in Rust."
+    />
+    <meta name="twitter:image" content="https://kumo.jmaxdev.site/icon.png" />
+    <meta name="twitter:image:alt" content="Kumo package manager logo" />
+
+    <!-- Performance: fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,9 +59,111 @@
       rel="stylesheet"
     />
 
-    <title>Kumo — Security-first package manager for Node.js</title>
+    <!-- Structured data: SoftwareApplication + Organization + WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://kumo.jmaxdev.site/#organization",
+            "name": "Kumo",
+            "url": "https://kumo.jmaxdev.site/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://kumo.jmaxdev.site/icon.png",
+              "width": 1024,
+              "height": 1096
+            },
+            "sameAs": ["https://github.com/jmaxdev/Kumo"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://kumo.jmaxdev.site/#website",
+            "name": "Kumo",
+            "url": "https://kumo.jmaxdev.site/",
+            "description": "Fast, security-first package manager for Node.js written in Rust.",
+            "publisher": { "@id": "https://kumo.jmaxdev.site/#organization" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://kumo.jmaxdev.site/#webpage",
+            "url": "https://kumo.jmaxdev.site/",
+            "name": "Kumo — Fast Package Manager for Node.js | Security-First",
+            "isPartOf": { "@id": "https://kumo.jmaxdev.site/#website" },
+            "about": { "@id": "https://kumo.jmaxdev.site/#software" },
+            "description": "Kumo is a high-performance package manager for Node.js written in Rust. BLAKE3 caching, OS-level sandboxing, typosquatting protection, and OSV vulnerability scanning.",
+            "inLanguage": "en",
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://kumo.jmaxdev.site/icon.png"
+            }
+          },
+          {
+            "@type": ["SoftwareApplication", "SoftwareSourceCode"],
+            "@id": "https://kumo.jmaxdev.site/#software",
+            "name": "Kumo",
+            "applicationCategory": "DeveloperApplication",
+            "applicationSubCategory": "Package Manager",
+            "operatingSystem": "Windows, macOS, Linux",
+            "description": "High-performance, security-first package manager for the Node.js ecosystem. Content-addressable BLAKE3 store, OS-level sandboxing for lifecycle scripts, typosquatting detection, OSV vulnerability scanning, and license compliance.",
+            "url": "https://kumo.jmaxdev.site/",
+            "downloadUrl": "https://kumo.jmaxdev.site/install.sh",
+            "softwareVersion": "1.0.4",
+            "license": "https://github.com/jmaxdev/Kumo/blob/main/app/LICENSE.md",
+            "author": { "@id": "https://kumo.jmaxdev.site/#organization" },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "BLAKE3 content-addressable package store",
+              "OS-level sandboxing for postinstall scripts",
+              "Typosquatting detection",
+              "OSV vulnerability scanning",
+              "SPDX license compliance",
+              "Zero-config build caching",
+              "Docker multi-arch images",
+              "Cross-platform: Linux, macOS, Windows"
+            ],
+            "programmingLanguage": ["Rust", "JavaScript", "TypeScript"],
+            "codeRepository": "https://github.com/jmaxdev/Kumo",
+            "sameAs": ["https://github.com/jmaxdev/Kumo"]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
+    <!-- Crawlable fallback for non-JS agents (SPA) -->
+    <noscript>
+      <main>
+        <h1>Kumo — Fast Package Manager for Node.js</h1>
+        <p>
+          Kumo is a high-performance, security-first package manager for Node.js written in Rust.
+          It provides BLAKE3 content-addressable caching, OS-level sandboxing for lifecycle scripts,
+          typosquatting protection, OSV vulnerability scanning, and SPDX license compliance.
+        </p>
+        <p>
+          Install on macOS/Linux:
+          <code>curl -fsSL https://kumo.jmaxdev.site/install.sh | bash</code>
+        </p>
+        <p>
+          Install on Windows:
+          <code
+            >Invoke-WebRequest https://kumo.jmaxdev.site/install.ps1 -UseBasicParsing |
+            Invoke-Expression</code
+          >
+        </p>
+        <p>
+          <a href="https://github.com/jmaxdev/Kumo">GitHub repository</a>
+          ·
+          <a href="https://github.com/jmaxdev/Kumo/blob/main/app/docs/kumo.md">Documentation</a>
+        </p>
+      </main>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -2,18 +2,21 @@ import { PROBLEMS } from '../../lib/constants'
 
 export function Problems() {
   return (
-    <section className="py-20 md:py-28 border-t border-slate-800/60">
+    <section
+      aria-labelledby="problems-heading"
+      className="py-20 md:py-28 border-t border-slate-800/60"
+    >
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <p className="text-sm font-semibold uppercase tracking-widest text-brand mb-3">
             The Problem
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 id="problems-heading" className="text-3xl md:text-4xl font-bold mb-4">
             Why your current package manager is holding you back
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Modern JavaScript projects are bigger than ever. The tools we use to manage them
-            haven't kept up.
+            Modern JavaScript and TypeScript projects are bigger than ever. Dependency management
+            tools have not kept up with install speed or supply chain security.
           </p>
         </div>
 

@@ -1,0 +1,10 @@
+# https://kumo.jmaxdev.site/robots.txt
+User-agent: *
+Allow: /
+
+# Install scripts are public download endpoints — allow crawl, low value for indexing
+Allow: /install.sh
+Allow: /install.ps1
+
+# Sitemap
+Sitemap: https://kumo.jmaxdev.site/sitemap.xml

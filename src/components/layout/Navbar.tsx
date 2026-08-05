@@ -3,11 +3,17 @@ import { BRAND, NAV_LINKS } from '../../lib/constants'
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-bg/80 border-b border-slate-800/60">
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2.5 group">
+      <nav
+        className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between"
+        aria-label="Primary"
+      >
+        <a href="/" className="flex items-center gap-2.5 group" aria-label="Kumo home">
           <img
             src="/icon.png"
-            alt={`${BRAND.name} logo`}
+            alt=""
+            width={32}
+            height={32}
+            decoding="async"
             className="w-8 h-8 transition-transform group-hover:rotate-12"
           />
           <span className="font-bold text-lg tracking-tight">{BRAND.name}</span>
@@ -27,7 +33,7 @@ export function Navbar() {
           <a
             href={BRAND.github}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center px-3 py-1.5 text-sm text-slate-300 hover:text-white border border-slate-700 hover:border-slate-600 rounded-md transition-colors"
           >
             GitHub

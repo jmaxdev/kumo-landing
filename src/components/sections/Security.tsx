@@ -3,21 +3,29 @@ import { CodeBlock } from '../ui/CodeBlock'
 
 export function Security() {
   return (
-    <section id="security" className="py-20 md:py-28 border-t border-slate-800/60 relative">
+    <section
+      id="security"
+      aria-labelledby="security-heading"
+      className="py-20 md:py-28 border-t border-slate-800/60 relative"
+    >
       {/* subtle background glow */}
-      <div className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-brand/10 rounded-full blur-[120px] pointer-events-none" />
+      <div
+        className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-brand/10 rounded-full blur-[120px] pointer-events-none"
+        aria-hidden="true"
+      />
 
       <div className="relative max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <p className="text-sm font-semibold uppercase tracking-widest text-brand mb-3">
             Security
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Six layers of defense, before a byte touches disk
+          <h2 id="security-heading" className="text-3xl md:text-4xl font-bold mb-4">
+            Supply chain security before a byte touches disk
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Supply chain attacks are the new normal. Kumo validates every package against
-            configurable policies during resolution — not after.
+            Dependency attacks are the new normal. Kumo validates every package against
+            configurable policies during resolution — sandboxing, typosquatting checks, OSV scans,
+            and license allowlists.
           </p>
         </div>
 

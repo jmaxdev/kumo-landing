@@ -37,6 +37,13 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: 'cv11', 'ss01';
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  /* Improve keyboard focus visibility (a11y + SEO signals) */
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
   }
   ::selection {
     background-color: var(--color-brand);

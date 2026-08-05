@@ -2,21 +2,30 @@ import { BRAND, FOOTER_LINKS } from '../../lib/constants'
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-800/60 pt-16 pb-8">
+    <footer className="border-t border-slate-800/60 pt-16 pb-8" role="contentinfo">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 pb-14">
           <div className="lg:col-span-2">
-            <a href="#" className="inline-flex items-center gap-2.5 mb-4">
-              <img src="/icon.png" alt="Kumo logo" className="w-8 h-8" />
+            <a href="/" className="inline-flex items-center gap-2.5 mb-4" aria-label="Kumo home">
+              <img
+                src="/icon.png"
+                alt=""
+                width={32}
+                height={32}
+                decoding="async"
+                loading="lazy"
+                className="w-8 h-8"
+              />
               <span className="font-bold text-lg">{BRAND.name}</span>
             </a>
             <p className="text-sm text-slate-400 max-w-xs leading-relaxed mb-5">
-              {BRAND.tagline}. Built with Rust for developers who care about speed and trust.
+              {BRAND.tagline}. Built with Rust for developers who care about install speed and
+              supply chain trust.
             </p>
             <a
               href={BRAND.github}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors"
             >
               <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
@@ -35,7 +44,7 @@ export function Footer() {
                     <a
                       href={link.href}
                       target={link.href.startsWith('http') ? '_blank' : undefined}
-                      rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
+                      rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                       className="text-sm text-slate-400 hover:text-brand-300 transition-colors"
                     >
                       {link.label}

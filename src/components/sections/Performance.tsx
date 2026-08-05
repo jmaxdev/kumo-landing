@@ -2,14 +2,18 @@ import { PERF_NOTE, PERF_STATS } from '../../lib/constants'
 
 export function Performance() {
   return (
-    <section id="performance" className="py-20 md:py-28 border-t border-slate-800/60">
+    <section
+      id="performance"
+      aria-labelledby="performance-heading"
+      className="py-20 md:py-28 border-t border-slate-800/60"
+    >
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <p className="text-sm font-semibold uppercase tracking-widest text-brand mb-3">
             Performance
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Fast where it matters, cached where it counts
+          <h2 id="performance-heading" className="text-3xl md:text-4xl font-bold mb-4">
+            Fast dependency installs, cached where it counts
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">{PERF_NOTE}</p>
         </div>

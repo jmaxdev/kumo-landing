@@ -12,25 +12,41 @@ export function Hero() {
   }
 
   return (
-    <section className="relative overflow-hidden pt-20 pb-24 md:pt-28 md:pb-32">
+    <section
+      aria-labelledby="hero-heading"
+      className="relative overflow-hidden pt-20 pb-24 md:pt-28 md:pb-32"
+    >
       {/* Background grid + glow */}
-      <div className="absolute inset-0 bg-grid bg-grid-mask pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-brand/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 bg-grid bg-grid-mask pointer-events-none" aria-hidden="true" />
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-brand/20 rounded-full blur-[120px] pointer-events-none"
+        aria-hidden="true"
+      />
 
       <div className="relative max-w-5xl mx-auto px-6 text-center">
         {/* Logo */}
         <div className="flex justify-center mb-8">
           <div className="relative">
-            <div className="absolute inset-0 bg-brand/30 blur-2xl rounded-full animate-pulse-glow" />
+            <div
+              className="absolute inset-0 bg-brand/30 blur-2xl rounded-full animate-pulse-glow"
+              aria-hidden="true"
+            />
             <img
               src="/icon.png"
-              alt={`${BRAND.name} logo`}
+              alt="Kumo package manager logo"
+              width={112}
+              height={112}
+              decoding="async"
+              fetchPriority="high"
               className="relative w-24 h-24 md:w-28 md:h-28 animate-float"
             />
           </div>
         </div>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] mb-6">
+        <h1
+          id="hero-heading"
+          className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] mb-6"
+        >
           <span className="text-gradient">{BRAND.name}</span>
           <br />
           <span className="text-white">{BRAND.tagline}</span>
@@ -98,7 +114,7 @@ export function Hero() {
           <a
             href={BRAND.github}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-slate-200 bg-bg-card border border-slate-700 hover:border-slate-500 rounded-lg transition-colors"
           >
             <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
