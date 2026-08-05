@@ -1,0 +1,27 @@
+{
+  "block_deprecated": true,
+  "min_severity": "high",
+  "blocked_packages": [],
+  "allowed_licenses": [
+    "MIT",
+    "Apache-2.0",
+    "ISC",
+    "BSD-3-Clause"
+  ],
+  "minimum_release_age": 1440,
+  "allow_postinstall": false,
+  "trusted_packages": [],
+  "trust_policy": "none",
+  "trust_policy_exclude": [],
+  "trust_policy_ignore_after": 10080,
+  "protected_packages": [],
+  "allowed_domains": [
+    "objects.githubusercontent.com",
+    "registry.npmjs.org",
+    "github.com",
+    "nodejs.org"
+  ],
+  "AllowedImportHost": [],
+  "useNodeModules": true,
+  "registry": "npm"
+}
