@@ -1,5 +1,5 @@
 # Stage 1: Builder using Kumo
-FROM ghcr.io/jmaxdev/kumo AS builder
+FROM ghcr.io/jmaxdev/kumo:next AS builder
 
 RUN kumo runtime use 24
 
@@ -9,7 +9,7 @@ WORKDIR /app
 COPY package.json kumo.config.json* ./
 
 # Install dependencies inside container
-RUN kumo fetch && kumo ci
+RUN kumo install
 
 # Copy source code
 COPY . .
