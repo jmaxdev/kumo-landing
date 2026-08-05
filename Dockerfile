@@ -1,20 +1,20 @@
-# Stage 1: Builder using Kumo
-FROM ghcr.io/jmaxdev/kumo:next AS builder
+# Stage 1: Builder using Kumo (stable, not :next / alpha)
+FROM ghcr.io/jmaxdev/kumo AS builder
 
 RUN kumo runtime use 24
 
 WORKDIR /app
 
-# Copy package definition and kumo config
+# Copy package definition and kumo config (resolve for container platform)
 COPY package.json kumo.config.json* ./
 
-# Install dependencies inside container
+# Install all deps (including devDependencies needed for the build)
 RUN kumo install
 
-# Copy source code
+# Copy source (includes scripts/fix-kumo-types.mjs used by build)
 COPY . .
 
-# Build production bundle
+# Build production bundle (typecheck + vite)
 RUN kumo run build
 
 # Stage 2: Runner
