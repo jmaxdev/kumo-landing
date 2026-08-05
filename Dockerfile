@@ -9,7 +9,7 @@ WORKDIR /app
 COPY package.json kumo.config.json* ./
 
 # Install dependencies inside container
-RUN kumo install
+RUN kumo fetch && kumo ci
 
 # Copy source code
 COPY . .
